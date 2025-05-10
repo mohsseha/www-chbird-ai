@@ -1,39 +1,1062 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bird Coming Soon</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      color: #333;
-    }
-    .container {
-      text-align: center;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    p {
-      font-size: 1.5em;
-      margin-top: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionizing How Decision Makers See Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Updated Font Link: Added Inknut Antiqua Black 900 -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5AB0FF; /* Blue 600 */
+            --primary-dark: #3a8cffa6; /* Blue 700 */
+            --accent: #FFD500; /* Cyan 500 */
+            --text: #1e293b; /* Slate 800 */
+            --text-light: #64748b; /* Slate 500 */
+            --background: #ffffff; /* White */
+            --background-alt: #f8fafc; /* Slate 50 */
+            --border: #e2e8f0; /* Slate 200 */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+            /* Define Brand Font Family */
+            --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Default font set on body */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Offset for fixed header */
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            background-color: var(--background);
+            font-family: var(--font-body); /* Use Inter for body */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--background);
+            box-shadow: var(--shadow-md);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 24px; /* Base size for logo text */
+            font-weight: 900; /* Use Black weight for logo text */
+            font-family: var(--font-brand); /* Use Brand Font for Logo Text */
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        /* Style the logo image */
+        .logo img.logo-img {
+            height: 45px; /* Control image height */
+            width: auto;  /* Maintain aspect ratio */
+            margin-right: 5px; /* Space between image and text */
+            /* Flex alignment is handled by parent .logo */
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a:not(.btn) {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500; /* Keep nav links legible */
+            font-family: var(--font-body); /* Ensure nav links use body font */
+            transition: color 0.3s ease;
+            padding: 5px 0;
+        }
+
+        nav ul li a:not(.btn):hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+             display: none; /* Hidden by default */
+             background: none;
+             border: none;
+             cursor: pointer;
+             padding: 10px;
+        }
+
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 6px;
+            font-weight: 600; /* Keep button text clear */
+            font-family: var(--font-body); /* Buttons use body font */
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px 22px; /* Adjust padding for border */
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: none;
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-alt {
+             background-color: var(--background-alt);
+        }
+
+        /* Hero Section */
+        #hero {
+            padding-top: 80px; /* Account for header height */
+            background: var(--background-alt); /* Simpler background */
+            min-height: calc(100vh - 80px); /* Adjust min-height */
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Updated Headings Typography */
+        h1, h2, h3 {
+            font-family: var(--font-body); /* Use Brand Font */
+            font-weight: 900; /* Use Black weight */
+            color: var(--text);
+            line-height: 1.2; /* Adjust line-height if needed for the new font */
+        }
+
+        h1 {
+            font-size: 48px; /* Adjust size if needed */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 36px; /* Adjust size if needed */
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 20px; /* Adjust size if needed */
+            margin-bottom: 10px;
+        }
+
+        /* Paragraphs use body font (Inter) */
+        p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 18px; /* Slightly larger base paragraph */
+            font-family: var(--font-body);
+        }
+
+        p.lead { /* Specific style for hero paragraph */
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-family: var(--font-body);
+        }
+
+        .hero-cta {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+            gap: 20px;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px; /* More space for underline */
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-light);
+            font-family: var(--font-body);
+        }
+
+        /* Problem Section */
+        #problem .intro-text {
+             text-align: center;
+             max-width: 800px;
+             margin: 0 auto 40px auto;
+        }
+
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pain-point {
+            background-color: var(--background);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .pain-point:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pain-point-icon {
+            margin: 0 auto 20px auto; /* Center icon */
+            width: 50px;
+            height: 50px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+        .pain-point-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .pain-point h3 {
+            font-size: 18px; /* Adjusted H3 size */
+        }
+        .pain-point p {
+            font-size: 16px;
+            margin-bottom: 0;
+            font-family: var(--font-body);
+        }
+
+        .problem-quote {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 18px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: var(--font-body);
+        }
+
+        /* Solution Section */
+        #solution .solution-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+        #solution img {
+            display: block; /* Center image properly */
+            max-width: 100%;
+            height: auto;
+            margin: 50px auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+        #solution .highlight-text {
+            text-align: center;
+            font-weight: 600; /* Keep highlight */
+            color: var(--text);
+            margin-top: 40px;
+            font-size: 18px;
+            font-family: var(--font-body);
+        }
+
+        /* How It Works Section */
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 30px;
+            position: relative;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* Dashed line connector - only on larger screens */
+        @media (min-width: 992px) {
+            .step:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 40px; /* Align with center of number */
+                right: calc(-50% + 60px); /* Adjust position between steps */
+                width: calc(100% - 120px); /* Adjust length */
+                height: 2px;
+                background-image: linear-gradient(to right, var(--border) 50%, transparent 50%);
+                background-size: 10px 2px;
+                background-repeat: repeat-x;
+                z-index: -1;
+            }
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: 700; /* Keep number bold */
+            font-family: var(--font-body); /* Number can use body font */
+            box-shadow: var(--shadow-md);
+            border: 4px solid var(--background); /* Makes it pop */
+        }
+
+        .step h3 {
+            font-size: 18px; /* Adjusted H3 size */
+            margin-bottom: 5px;
+        }
+        .step p {
+            font-size: 16px;
+            margin-bottom: 0;
+            font-family: var(--font-body);
+        }
+
+        #how-it-works .conclusion-text {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            font-family: var(--font-body);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit {
+            background-color: var(--background);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex; /* Align icon and text */
+            gap: 20px;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-icon {
+            color: var(--primary);
+            font-size: 24px; /* Kept simple, icon size controlled by svg */
+            flex-shrink: 0; /* Prevent icon from shrinking */
+            margin-top: 3px; /* Align icon better with text */
+        }
+        .benefit-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .benefit-text h3 {
+            font-size: 18px; /* Adjusted H3 size */
+            margin-bottom: 5px;
+        }
+        .benefit-text p {
+            font-size: 16px;
+            margin-bottom: 0;
+            font-family: var(--font-body);
+        }
+
+        /* Advantage Section */
+         #advantage .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .comparison {
+            margin-top: 50px;
+            display: grid; /* Use grid for better alignment */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .comparison-item {
+            padding: 30px;
+            background-color: var(--background);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .comparison-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+         .comparison-item h3 {
+            font-size: 18px; /* Adjusted H3 size */
+            color: var(--primary);
+            margin-bottom: 10px;
+         }
+         .comparison-item p {
+            font-size: 16px;
+            margin-bottom: 0;
+            font-family: var(--font-body);
+         }
+
+         #advantage .highlight-text {
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 50px;
+            font-size: 18px;
+            font-family: var(--font-body);
+        }
+
+        /* Use Cases Section */
+        .use-cases {
+            display: grid; /* Grid works well here too */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-top: 50px;
+            gap: 30px;
+        }
+
+        .use-case {
+            padding: 30px;
+            background-color: var(--background);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .use-case:hover {
+             transform: translateY(-5px);
+             box-shadow: var(--shadow-md);
+        }
+
+        .use-case h3 {
+            font-size: 18px; /* Adjusted H3 size */
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .use-case ul {
+            list-style-type: none;
+            margin-top: 15px;
+            padding-left: 0; /* Remove default padding */
+        }
+
+        .use-case ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 16px;
+            color: var(--text-light);
+            font-family: var(--font-body);
+        }
+
+        .use-case ul li::before {
+            content: ''; /* Use SVG for checkmark or keep circle */
+            position: absolute;
+            left: 0;
+            top: 7px; /* Adjust vertical alignment */
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent);
+            border-radius: 50%;
+        }
+
+        /* CTA Section */
+        #cta {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0; /* Slightly less padding */
+        }
+
+        #cta h2, #cta p {
+            color: white;
+        }
+        #cta h2 {
+            font-family: var(--font-body); /* CTA heading uses brand font */
+        }
+
+        #cta p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-family: var(--font-body); /* CTA paragraph uses body font */
+        }
+
+        #cta .btn {
+            background-color: white;
+            color: var(--primary);
+            font-family: var(--font-body); /* Ensure button uses body font */
+        }
+
+        #cta .btn:hover {
+            background-color: var(--background-alt);
+            color: var(--primary-dark);
+         }
+
+        /* Footer */
+        footer {
+            background-color: var(--background-alt);
+            padding: 60px 0 40px 0; /* Adjust padding */
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px; /* Limit width */
+        }
+        .footer-about .logo {
+             margin-bottom: 15px;
+             font-size: 20px; /* Slightly smaller logo text in footer */
+        }
+        .footer-about p {
+             font-size: 14px;
+             margin-bottom: 0;
+             font-family: var(--font-body);
+        }
+
+        .footer-links {
+            display: flex;
+            flex: 2;
+            justify-content: space-around; /* Distribute space */
+            flex-wrap: wrap;
+            gap: 40px; /* Increase gap between columns */
+        }
+
+        .footer-column {
+            min-width: 150px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+            font-size: 16px; /* Adjusted H3 size */
+            /* Font family/weight inherited from h3 rule */
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-family: var(--font-body); /* Footer links use body font */
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 14px;
+            font-family: var(--font-body); /* Copyright uses body font */
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .hero-cta {
+                justify-content: center;
+            }
+
+             .steps {
+                 flex-direction: column;
+                 align-items: center; /* Center steps when stacked */
+             }
+            .step {
+                min-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+             /* Adjust heading sizes for mobile if needed */
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p, p.lead {
+                font-size: 16px;
+            }
+
+            nav ul {
+                display: none; /* Hide nav links by default on mobile */
+                /* Add styles here for when mobile menu is active */
+            }
+
+            .mobile-menu-btn {
+                display: block; /* Show hamburger */
+            }
+
+            section {
+                 padding: 80px 0;
+            }
+            #hero {
+                 padding-top: 80px; /* Header height */
+                 min-height: auto; /* Remove min-height */
+                 padding-bottom: 80px;
+            }
+
+            .footer-content {
+                 flex-direction: column;
+                 align-items: center;
+                 text-align: center;
+            }
+            .footer-links {
+                 justify-content: center;
+                 gap: 30px;
+            }
+            .footer-column {
+                 text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🦜 Bird Coming Soon!</h1>
-    <p>We're working on something special. Stay tuned!</p>
-  </div>
-</body>
-</html>
+    <header>
+        <div class="container header-container">
+             <!-- Updated Logo: Uses PNG image -->
+            <a href="#" class="logo">
+                <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                ChromeBird
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#cta" class="btn cta">Book Demo</a></li> <!-- Changed to btn class -->
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </header>
 
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <!-- H1 uses Inknut Antiqua -->
+                        <h1 style="font-size: 55px;">Revolutionizing How Decision Makers See Software</h1>
+                        <!-- Paragraph uses Inter -->
+                        <p class="lead">ChromeBird gives you an objective AI-powered view into your codebase, precise product requirements, and accurate progress of dev work </p>
+                        <div class="hero-cta">
+                            <a href="#cta" class="btn btn-large">Try for free</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="dashboard.png" alt="Illustration showing codebase insights on ChromeBird dashboard" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem">
+            <div class="container">
+                <div class="section-header">
+                    <!-- H2 uses Inknut Antiqua -->
+                    <h2>Decisions Made in the Dark?</h2>
+                    <!-- Paragraph uses Inter -->
+                    <p>Your business runs on code, but key decisions often rely on gut feelings and filtered updates, leading to costly disconnects.</p>
+                </div>
+
+                <div class="pain-points">
+                    <div class="pain-point">
+                        <div class="pain-point-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                        <!-- H3 uses Inknut Antiqua -->
+                        <h3>Zero Objective Visibility</h3>
+                         <!-- Paragraph uses Inter -->
+                        <p>No direct way to see or truly understand development progress.</p>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point-icon">
+                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                         <!-- H3 uses Inknut Antiqua -->
+                        <h3>Reliance on Intermediaries</h3>
+                         <!-- Paragraph uses Inter -->
+                        <p>Decisions filtered through layers of management and subjective reports.</p>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point-icon">
+                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                         <!-- H3 uses Inknut Antiqua -->
+                        <h3>Inaccurate Timelines</h3>
+                         <!-- Paragraph uses Inter -->
+                        <p>Ballpark estimates lead to unpredictable delays and cost overruns.</p>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        </div>
+                         <!-- H3 uses Inknut Antiqua -->
+                        <h3>Strategic Risks</h3>
+                         <!-- Paragraph uses Inter -->
+                        <p>Lack of clarity hinders effective planning and leads to costly mistakes.</p>
+                    </div>
+                </div>
+                 
+            </div>
+        </section>
+
+        <section id="solution" class="section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <!-- H2 uses Inknut Antiqua -->
+                    <h2>Your Objective Window into Software Development</h2>
+                </div>
+
+                <img src="insights.png" alt="Diagram showing ChromeBird analyzing code and providing clear insights" />
+
+                 <!-- Paragraph uses Inter -->
+                <p class="highlight-text">No more human shields. Get direct, unbiased visibility into progress, complexity, and potential roadblocks.</p>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                     <!-- H2 uses Inknut Antiqua -->
+                    <h2>Clarity in 3 Simple Steps</h2>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <!-- H3 uses Inknut Antiqua -->
+                        <h3>Connect</h3>
+                        <!-- Paragraph uses Inter -->
+                        <p>Securely link your code repositories (GitHub, GitLab, Bitbucket, etc.) in minutes.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <!-- H3 uses Inknut Antiqua -->
+                        <h3>Analyze</h3>
+                        <!-- Paragraph uses Inter -->
+                        <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                         <!-- H3 uses Inknut Antiqua -->
+                        <h3>Visualize</h3>
+                        <!-- Paragraph uses Inter -->
+                        <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and potential risks.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="benefits" class="section-alt">
+            <div class="container">
+                <div class="section-header">                    
+                    <h2>Why Leaders Choose ChromeBird</h2>
+                </div>
+                <div class="benefits">
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div class="benefit-text">
+                            <!-- H3 uses Inknut Antiqua -->
+                            <h3>Unprecedented Transparency</h3>
+                             <!-- Paragraph uses Inter -->
+                            <p>See exactly where development stands and how features are progressing in real-time.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <div class="benefit-text">
+                             <!-- H3 uses Inknut Antiqua -->
+                            <h3>Data-Driven Decisions</h3>
+                             <!-- Paragraph uses Inter -->
+                            <p>Replace guesswork with objective insights derived directly from your codebase.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                         <div class="benefit-text">
+                             <!-- H3 uses Inknut Antiqua -->
+                           <h3>Realistic Estimations</h3>
+                             <!-- Paragraph uses Inter -->
+                            <p>Get AI-powered projections for future work based on actual code complexity and history.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                        </div>
+                         <div class="benefit-text">
+                             <!-- H3 uses Inknut Antiqua -->
+                            <h3>Bridge Business & Tech</h3>
+                             <!-- Paragraph uses Inter -->
+                            <p>Foster alignment and shared understanding by giving everyone a common, objective view.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        </div>
+                        <div class="benefit-text">
+                            <!-- H3 uses Inknut Antiqua -->
+                            <h3>Optimize Resource Allocation</h3>
+                            <!-- Paragraph uses Inter -->
+                            <p>Understand where engineering effort is *really* going and identify hidden bottlenecks.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <div class="benefit-text">
+                             <!-- H3 uses Inknut Antiqua -->
+                            <h3>Manage Teams Effectively</h3>
+                             <!-- Paragraph uses Inter -->
+                            <p>Objectively assess the progress and quality of in-house, remote, or contractor teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="cta">
+            <div class="container">
+                <!-- H2 uses Inknut Antiqua -->
+                <h2>Ready to Make Code Decisions with Confidence?</h2>
+                <!-- Paragraph uses Inter -->
+                <p>Stop navigating your most critical asset blindfolded. See what's happening, understand the effort involved, and lead your software products with clarity.</p>
+                <a href="#request-demo-form" class="btn btn-large">Request Your Personalized Demo</a>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                     <!-- Updated Logo: Uses PNG image -->
+                     <a href="#" class="logo">
+                        <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                        ChromeBird
+                    </a>
+                     <!-- Paragraph uses Inter -->
+                    <p>Providing objective codebase intelligence for smarter software decisions.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <!-- H3 uses Inknut Antiqua -->
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="#solution">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#cta">Request Demo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <!-- H3 uses Inknut Antiqua -->
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <!-- H3 uses Inknut Antiqua -->
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <!-- Paragraph uses Inter -->
+                © 2025 ChromeBird Inc. All rights reserved.
+                </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
