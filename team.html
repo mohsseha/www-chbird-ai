@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- AOS CSS (Optional, but included for consistency) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -49,12 +48,11 @@
 
         .container {
             width: 100%;
-            max-width: 900px; /* Consistent with privacy page for content */
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background-color: var(--background);
             box-shadow: var(--shadow-md);
@@ -151,11 +149,10 @@
             color: var(--text);
         }
 
-        /* Main Content Area for Static Pages */
         .page-content {
-            padding-top: 120px; /* Space for fixed header */
+            padding-top: 120px;
             padding-bottom: 60px;
-            text-align: center; /* Center content for team page */
+            text-align: center;
         }
 
         .page-content h1 {
@@ -163,7 +160,7 @@
             font-weight: 900;
             color: var(--text);
             font-size: 36px;
-            margin-bottom: 40px; /* More space after main title */
+            margin-bottom: 40px;
         }
 
         .page-content h2 {
@@ -176,23 +173,21 @@
         }
         
         .page-content p {
-            font-size: 18px; /* Slightly larger for emphasis */
+            font-size: 18px;
             color: var(--text-light);
             margin-bottom: 25px;
             line-height: 1.7;
-            max-width: 700px; /* Constrain paragraph width */
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .linkedin-embed-container {
+        .linkedin-embed-wrapper { /* Renamed for clarity */
             margin: 30px auto;
-            max-width: 400px; /* Adjust as needed based on LinkedIn widget size */
-            /* You might need specific styles here once you have the actual embed code */
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px; /* Optional padding around the embed */
-            box-shadow: var(--shadow-sm);
+            /* The embedded widget will have its own width, often around 350-400px for the inline profile */
+            /* This wrapper can help center it if needed */
+            display: flex;
+            justify-content: center;
         }
         
         .join-us-section {
@@ -203,11 +198,9 @@
 
         .join-us-section p {
             font-size: 16px;
-            color: var(--text); /* Make this text a bit more prominent */
+            color: var(--text);
         }
 
-
-        /* Footer (Same as index.html for consistency) */
         footer {
             background-color: var(--background-alt);
             padding: 60px 0 40px 0;
@@ -284,7 +277,6 @@
             border-top: 1px solid var(--border);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -338,26 +330,12 @@
                 <p>
                     Husain is an AI infrastructure executive with a track record of building sovereign technology systems that have generated over $800M in business value. He has established AI capabilities that scale globally while maintaining data sovereignty and security, and is experienced in presenting technology strategy to boards and C-suites of Fortune 100 companies.
                 </p>
-                <div class="linkedin-embed-container" data-aos="zoom-in-up" data-aos-delay="200">
-                    <!--
-                        IMPORTANT: Replace the content below with the ACTUAL LinkedIn embed code for Husain's profile.
-                        You can usually generate this from Husain's LinkedIn profile (look for "Public profile badge" or similar options)
-                        or from the LinkedIn Developer site.
-
-                        A common (but potentially outdated, always check LinkedIn) way to embed is:
-                        <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-                        <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/husainalmohssen/" data-format="inline" data-related="false"></script>
-
-                        The script tag for platform.linkedin.com/in.js is usually placed once, either in the <head> or before the </body>.
-                        Then, the <script type="IN/MemberProfile"...> tag is placed where you want the profile to appear.
-                        Adjust the 'data-id' with the correct profile URL.
-                    -->
-                    <p style="text-align:center; padding: 20px; color: var(--text-light);">
-                        LinkedIn Profile Embed for Husain Al-Mohssen will appear here.
-                        <br><br>
-                        <a href="https://www.linkedin.com/in/husainalmohssen/" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">View Husain's Profile on LinkedIn</a>
-                    </p>
-                    <!-- End of LinkedIn Embed Placeholder -->
+                <div class="linkedin-embed-wrapper" data-aos="zoom-in-up" data-aos-delay="200">
+                    <!-- LinkedIn Member Profile Embed Code -->
+                    <!-- This uses the standard LinkedIn Member Profile Plugin. -->
+                    <!-- The script for platform.linkedin.com/in.js is included before the closing </body> tag. -->
+                    <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="husainalmohssen"><a class="LI-simple-link" href='https://www.linkedin.com/in/husainalmohssen?trk=profile-badge'>Husain Al-Mohssen</a></div>
+                    <!-- End LinkedIn Member Profile Embed Code -->
                 </div>
             </div>
 
@@ -415,15 +393,14 @@
                 </div>
             </div>
             <div class="copyright">
-                © 2025 ChromeBird Inc. All rights reserved. <!-- Updated Year -->
+                © 2025 ChromeBird Inc. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- LinkedIn Platform Script - Place this ONCE per page, ideally before </body> or in <head> -->
-    <!-- <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script> -->
+    <!-- LinkedIn Platform Script - Loads the necessary JavaScript for the badge/plugin -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -431,7 +408,6 @@
         once: true,
       });
 
-      // Mobile Menu Toggle (copy from index.html if you want consistent behavior for mobile nav)
       const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
       const navUl = document.querySelector('header nav ul');
 
@@ -441,7 +417,6 @@
                   navUl.style.display = 'none';
               } else {
                   navUl.style.display = 'flex';
-                  // Add further styling for mobile menu appearance if needed here
               }
           });
       }
