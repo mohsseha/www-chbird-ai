@@ -27,17 +27,16 @@
             --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
-            --hero-text-color: #414b52; /* MODIFIED: New color for hero text */
+            --hero-text-color: #414b52; 
         }
 
-        [data-aos] { /* Prevents flash of unstyled content before AOS kicks in for some animations */
+        [data-aos] { 
             opacity: 0;
             transition-property: opacity, transform;
         }
         [data-aos].aos-animate {
             opacity: 1;
         }
-
 
         * {
             margin: 0;
@@ -47,7 +46,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 80px; /* Adjust if header height changes */
+            scroll-padding-top: 80px; 
         }
 
         body {
@@ -56,7 +55,7 @@
             font-size: 16px;
             background-color: var(--background);
             font-family: var(--font-body);
-            overflow-x: hidden; /* Prevent horizontal scrollbar if AOS elements peek out */
+            overflow-x: hidden; 
         }
 
         .container {
@@ -66,7 +65,6 @@
             padding: 0 20px;
         }
 
-        /* Header */
         header {
             background-color: var(--background);
             box-shadow: var(--shadow-md);
@@ -105,7 +103,7 @@
         }
 
         .header-brand-text {
-            font-weight: bold; /* Explicitly 'bold', which is 700 for IBM Plex Sans */
+            font-weight: bold; 
         }
 
         nav {
@@ -136,7 +134,7 @@
             font-family: var(--font-body);
             transition: color 0.3s ease;
             padding: 5px 0;
-            font-size: 1.3em; /* MODIFIED: Increased font size by 30% (1em default * 1.3) */
+            font-size: 1.3em; 
         }
 
         nav ul li a:not(.btn):hover {
@@ -160,7 +158,6 @@
             color: var(--text);
         }
 
-        /* Buttons */
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -182,13 +179,12 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
-
+        
         .btn-large {
             padding: 16px 32px;
             font-size: 18px;
         }
 
-        /* Sections */
         section {
             padding: 100px 0;
             position: relative;
@@ -198,7 +194,6 @@
              background-color: var(--background-alt);
         }
 
-        /* Hero Section */
         #hero {
             padding-top: 120px;
             padding-bottom: 60px;
@@ -230,7 +225,6 @@
             100% { background-position: 0% 50%; transform: scale(1.1); }
         }
 
-
         .hero-content {
             display: flex;
             flex-direction: column;
@@ -244,7 +238,7 @@
         .hero-text {
             max-width: 650px;
         }
-
+        
         .hero-image-wrapper {
             position: relative;
             width: 100%;
@@ -252,12 +246,11 @@
             aspect-ratio: 16 / 10;
             margin: 30px auto 0 auto;
             z-index: 5;
-            border-radius: 16px; /* MODIFIED: More rounded */
+            border-radius: 16px; 
             box-shadow: var(--shadow-lg);
             overflow: hidden;
             background-color: var(--background-alt);
-            border: 3px solid #adb5bd; /* MODIFIED: Added chrome-like border */
-            /* ANIMATION STYLES */
+            border: 3px solid #adb5bd; 
             transform-style: preserve-3d;
             transform: perspective(1000px) rotateX(30deg);
             transition: transform 0.3s ease-out;
@@ -272,8 +265,6 @@
             object-position: center;
         }
 
-
-        /* Headings Typography */
         h1, h2, h3 {
             font-family: var(--brand-font);
             font-weight: 900;
@@ -287,22 +278,19 @@
         }
         #hero h1 {
             font-size: 55px;
-            color: var(--hero-text-color); /* MODIFIED */
-            /* Glow effect for hero H1 */
+            color: var(--hero-text-color); 
             text-shadow:
-                0 0 5px rgba(255, 255, 255, 0.6),  /* Inner subtle white glow */
-                0 0 10px rgba(255, 255, 255, 0.4), /* Outer subtle white glow */
-                0 0 10px var(--background); /* Optional colored glow, adjust color and opacity */
+                0 0 5px rgba(255, 255, 255, 0.6), 
+                0 0 10px rgba(255, 255, 255, 0.4),
+                0 0 10px var(--background); 
         }
          #hero p.lead {
-            color: var(--hero-text-color);  /* MODIFIED */
-            opacity: 0.9; /* Slightly less prominent than h1 */
-             /* Glow effect for hero lead paragraph */
+            color: var(--hero-text-color);  
+            opacity: 0.9; 
             text-shadow:
                 0 0 5px rgba(255, 255, 255, 0.5),
                 0 0 8px rgba(255, 255, 255, 0.3);
         }
-
 
         h2 {
             font-size: 36px;
@@ -322,7 +310,7 @@
             font-family: var(--font-body);
         }
 
-        p.lead { /* This applies to the hero lead, but hero-specific styles above will override color */
+        p.lead { 
             font-size: 20px;
             margin-bottom: 30px;
             font-family: var(--font-body);
@@ -332,7 +320,6 @@
             margin-top: 10px;
         }
 
-        /* Section Header */
         .section-header {
             text-align: center;
             margin-bottom: 60px;
@@ -362,8 +349,7 @@
             font-family: var(--font-body);
         }
 
-        /* AI Experts & Partners Section */
-        #ai-experts { /* "About Us" menu item links here */
+        #ai-experts { 
             padding-top: 100px;
         }
         .partner-logos {
@@ -395,8 +381,6 @@
             font-family: var(--font-body);
         }
 
-
-        /* Problem Section */
         #problem .intro-text {
              text-align: center;
              max-width: 800px;
@@ -456,7 +440,6 @@
             font-family: var(--font-body);
         }
 
-        /* How It Works Section */
         .steps {
             display: flex;
             justify-content: space-between;
@@ -518,7 +501,6 @@
             font-family: var(--font-body);
         }
 
-        /* Benefits Section */
         .benefits {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -559,34 +541,31 @@
             font-family: var(--font-body);
         }
 
-        /* CTA Section (Newsletter) */
         #cta {
             background-color: var(--primary);
             color: white;
             text-align: center;
             padding: 80px 0;
         }
-        #cta h2 { /* Retained for potential future h2 in CTA */
+        #cta h2 { 
             color: white;
             font-family: var(--brand-font);
             font-size: 32px;
         }
-        /* MODIFIED: Style for the newsletter link */
         #cta .container > a {
             display: block;
-            font-size: 28px; /* Much larger */
-            color: var(--accent); /* Yellow */
-            font-weight: 600; /* Prominent */
+            font-size: 28px; 
+            color: var(--accent); 
+            font-weight: 600; 
             text-decoration: none;
-            margin-bottom: 15px; /* Space below the link */
+            margin-bottom: 15px; 
             transition: color 0.3s ease, text-decoration 0.3s ease;
             text-decoration: underline;
         }
         #cta .container > a:hover {
-            color: #ffffff; /* White on hover */
+            color: #ffffff; 
             text-decoration: underline;
         }
-        /* END MODIFIED */
 
         #cta p:not(.newsletter-fallback) {
             color: white;
@@ -598,14 +577,14 @@
             font-family: var(--font-body);
             font-size: 18px;
         }
-        #cta iframe { /* This style was present but no iframe in current HTML for CTA */
+        #cta iframe { 
             max-width: 100%;
             margin: 0 auto;
             display: block;
         }
-        .newsletter-fallback { /* This style was present but no element with this class in current HTML for CTA */
+        .newsletter-fallback { 
             margin-top: 20px;
-            font-size: 60px; /* This seems excessively large, might be a typo or for a very specific fallback */
+            font-size: 60px; 
             opacity: 0.9;
         }
         .newsletter-fallback a {
@@ -617,8 +596,6 @@
             color: white !important;
         }
 
-
-        /* Footer */
         footer {
             background-color: var(--background-alt);
             padding: 60px 0 40px 0;
@@ -685,7 +662,6 @@
             border-top: 1px solid var(--border);
         }
 
-        /* Responsive Design */
         @media (max-width: 991px) {
             #hero {
                 padding-bottom: 40px;
@@ -710,17 +686,15 @@
             h1, #hero h1 {
                 font-size: 36px;
             }
-            h2, #cta h2 { font-size: 28px; } /* #cta h2 might not exist if only link is used */
+            h2, #cta h2 { font-size: 28px; } 
             p, p.lead { font-size: 16px; }
-
-            /* Responsive adjustment for newsletter link */
+            
             #cta .container > a {
-                font-size: 24px; /* Slightly smaller on smaller screens */
+                font-size: 24px; 
             }
             #cta p:not(.newsletter-fallback) {
-                font-size: 16px; /* Adjust paragraph below if needed */
+                font-size: 16px; 
             }
-
 
             nav ul {
                 display: none;
@@ -772,7 +746,6 @@
             .hero-image-wrapper {
                 max-height: 280px;
             }
-            /* Further responsive adjustment for newsletter link */
             #cta .container > a {
                 font-size: 20px;
             }
@@ -782,14 +755,14 @@
 <body>
     <header>
         <div class="container header-container">
-            <a href="index.html" class="logo"> <!-- Changed # to index.html for clarity -->
+            <a href="index.html" class="logo"> 
                 <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
                 <span class="header-brand-text">ChromeBird</span>
             </a>
             <nav>
                 <ul>
-                    <li><a href="index.html#ai-experts">About Us</a></li> <!-- Ensures it links to section on index.html -->
-                    <li><a href="team.html">Team</a></li> <!-- NEW LINK -->
+                    <li><a href="index.html#ai-experts">About Us</a></li> 
+                    <li><a href="team.html">Team</a></li> 
                     <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
                     <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
                 </ul>
@@ -816,11 +789,10 @@
             </div>
         </section>
 
-        <section id="ai-experts" class="section-alt"> <!-- "About Us" links here -->
+        <section id="ai-experts" class="section-alt"> 
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <h2>Built by world-class experts in AI</h2>
-                    <!-- Consider adding a short paragraph here about Husain's leadership and core team expertise based on feedback -->
                 </div>
                 <div class="partner-logos">
                     <img src="mit.png" alt="MIT Logo" data-aos="zoom-in" data-aos-delay="100">
@@ -828,7 +800,6 @@
                     <img src="darpa.png" alt="DARPA Logo" data-aos="zoom-in" data-aos-delay="300">
                     <img src="irobot.png" alt="iRobot Logo" data-aos="zoom-in" data-aos-delay="400">
                 </div>
-                 <!-- Could add a call to action to the team page here if desired -->
             </div>
         </section>
 
@@ -837,7 +808,6 @@
                 <div class="section-header" data-aos="fade-up">
                     <h2>Decisions Made in the Dark?</h2>
                     <p data-aos="fade-up" data-aos-delay="100">Your business runs on code, but key decisions often rely on gut feelings and filtered updates, leading to costly disconnects.</p>
-                    <!-- This is a good place to expand on the "Business" aspect based on Nicole's feedback -->
                 </div>
                 <div class="pain-points">
                     <div class="pain-point" data-aos="fade-up" data-aos-delay="200">
@@ -868,8 +838,7 @@
         <section id="how-it-works" class="section-alt">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2>3 Simple Steps to Clarity</h2> <!-- Slightly modified title -->
-                     <!-- This is a good place to expand on the "Product" aspect based on Nicole's feedback -->
+                    <h2>3 Simple Steps to Clarity</h2> 
                 </div>
                 <div class="steps">
                     <div class="step" data-aos="fade-right" data-aos-delay="100">
@@ -880,15 +849,14 @@
                     <div class="step" data-aos="fade-up" data-aos-delay="200">
                         <div class="step-number">2</div>
                         <h3>Analyze</h3>
-                        <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns to build a deep understanding.</p> <!-- Added detail -->
+                        <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns to build a deep understanding.</p> 
                     </div>
                     <div class="step" data-aos="fade-left" data-aos-delay="300">
                         <div class="step-number">3</div>
                         <h3>Action</h3>
-                        <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and deep insights to drive decisions.</p> <!-- Added detail -->
+                        <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and deep insights to drive decisions.</p> 
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -896,9 +864,7 @@
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <h2>Why ChromeBird?</h2>
-                    <!-- This is a good place to expand on the "Product" benefits based on Nicole's feedback -->
                 </div>
-                <!-- TODO: add the 3 ROI metrics -->
                 <div class="benefits">
                     <div class="benefit" data-aos="zoom-in-up" data-aos-delay="100">
                         <div class="benefit-icon">
@@ -945,7 +911,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about" data-aos="fade-up">
-                     <a href="index.html" class="logo"> <!-- Changed # to index.html -->
+                     <a href="index.html" class="logo"> 
                         <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
                         ChromeBird
                     </a>
@@ -955,67 +921,60 @@
                     <div class="footer-column">
                         <h3>Product</h3>
                         <ul>
-                            <li><a href="index.html#ai-experts">Features</a></li> <!-- Ensure correct anchor for current page -->
-                            <li><a href="index.html#how-it-works">How It Works</a></li> <!-- Ensure correct anchor for current page -->
-                            <li><a href="#">Pricing</a></li> <!-- Placeholder, update when ready -->
+                            <li><a href="index.html#ai-experts">Features</a></li> 
+                            <li><a href="index.html#how-it-works">How It Works</a></li> 
+                            <li><a href="#">Pricing</a></li> 
                             <li><a href="#cta">Newsletter</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Company</h3>
                         <ul>
-                            <li><a href="index.html#ai-experts">About Us</a></li> <!-- Ensure correct anchor -->
-                            <li><a href="team.html">Our Team</a></li> <!-- NEW LINK -->
-                            <li><a href="#">Careers</a></li> <!-- Placeholder, update when ready -->
+                            <li><a href="index.html#ai-experts">About Us</a></li> 
+                            <li><a href="team.html">Our Team</a></li> 
+                            <li><a href="mailto:jobs@chbird.ai">Careers</a></li> <!-- MODIFIED -->
                             <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                            <li><a href="#">Contact</a></li> <!-- Placeholder, update when ready -->
+                            <li><a href="mailto:coldcall@chbird.ai">Contact</a></li> 
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Legal</h3>
                         <ul>
-                            <li><a href="privacy.html">Privacy Policy</a></li> <!-- NEW LINK -->
-                            <li><a href="#">Terms of Service</a></li> <!-- Placeholder, update when ready -->
-                            <li><a href="#">Security</a></li> <!-- Placeholder, update when ready -->
+                            <li><a href="privacy.html">Privacy Policy</a></li> 
+                            <!-- Terms of Service Removed -->
+                            <!-- Security Removed -->
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright" data-aos="fade-in" data-aos-delay="200">
-                © 2024 ChromeBird Inc. All rights reserved. <!-- Updated year -->
+                © 2025 ChromeBird Inc. All rights reserved. <!-- MODIFIED -->
             </div>
         </div>
     </footer>
 
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 800, // values from 0 to 3000, with step 50ms
-        once: true, // whether animation should happen only once - while scrolling down
+        duration: 800, 
+        once: true, 
       });
 
-      // Dashboard image animation based on scroll
       const dashboardWrapper = document.getElementById('dashboard-image');
       let lastScrollY = window.pageYOffset;
 
       function animateDashboard() {
-        if (!dashboardWrapper) return; // Defensive check
+        if (!dashboardWrapper) return; 
         const currentScrollY = window.pageYOffset;
 
-        // Determine scroll direction and position
         if (currentScrollY <= 50) {
-          // At the top - lean forward
           dashboardWrapper.style.transform = 'perspective(1000px) rotateX(12deg)';
         } else {
-          // Scrolled down - stand upright
           dashboardWrapper.style.transform = 'perspective(1000px) rotateX(0deg)';
         }
-
         lastScrollY = currentScrollY;
       }
 
-      // Add scroll event listener with throttling
       let ticking = false;
       function handleScroll() {
         if (!ticking) {
@@ -1031,25 +990,18 @@
       window.addEventListener('load', animateDashboard);
       window.addEventListener('resize', animateDashboard);
 
-
-      // Mobile Menu Toggle
       const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-      const navUl = document.querySelector('header nav ul'); // Assuming this is the element to show/hide
+      const navUl = document.querySelector('header nav ul'); 
 
       if (mobileMenuBtn && navUl) {
           mobileMenuBtn.addEventListener('click', () => {
-              // This is a very basic toggle. You might want a more sophisticated slide-in/out animation.
-              if (navUl.style.display === 'flex' || navUl.style.display === '') { // Check if it's visible or initial state
-                  navUl.style.display = 'none'; // Hide it
+              if (navUl.style.display === 'flex' || navUl.style.display === '') { 
+                  navUl.style.display = 'none'; 
               } else {
-                  navUl.style.display = 'flex'; // Show it
-                  // For a mobile menu, you'd typically want it to be block or flex-column and styled differently
-                  // This is a quick toggle and would need further styling for a proper mobile menu experience.
-                  // e.g., navUl.style.flexDirection = 'column'; navUl.style.position = 'absolute'; etc.
+                  navUl.style.display = 'flex'; 
               }
           });
       }
-
     </script>
 </body>
 </html>

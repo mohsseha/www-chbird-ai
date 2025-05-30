@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logo.png" type="image/png">
-    <title>Our Team - ChromeBird</title>
+    <title>Team - ChromeBird // The Future of Code Intel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -159,47 +159,83 @@
             font-family: var(--brand-font);
             font-weight: 900;
             color: var(--text);
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .page-content h2 {
-            font-family: var(--brand-font);
-            font-weight: 700;
-            color: var(--text);
-            font-size: 28px;
-            margin-top: 50px;
-            margin-bottom: 20px;
+            font-size: 40px; /* Slightly bigger for impact */
+            margin-bottom: 25px;
         }
         
-        .page-content p {
-            font-size: 18px;
+        .page-content .subtitle {
+            font-family: var(--font-body);
+            font-size: 20px;
             color: var(--text-light);
-            margin-bottom: 25px;
-            line-height: 1.7;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 50px;
+            font-weight: 400;
         }
 
-        .linkedin-embed-wrapper { /* Renamed for clarity */
-            margin: 30px auto;
-            /* The embedded widget will have its own width, often around 350-400px for the inline profile */
-            /* This wrapper can help center it if needed */
+
+        .page-content h2 { /* For section titles like Husain's name */
+            font-family: var(--brand-font);
+            font-weight: 700; /* Bold but not 900 */
+            color: var(--text);
+            font-size: 26px; /* Adjusted size */
+            margin-top: 40px;
+            margin-bottom: 10px; /* Reduced bottom margin */
+        }
+        
+        .page-content p.bio { /* Specific class for bio text */
+            font-size: 17px; /* Slightly smaller, more direct */
+            color: var(--text); /* Darker for readability */
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .linkedin-embed-wrapper {
+            margin: 20px auto 40px auto; /* Adjusted margins */
             display: flex;
             justify-content: center;
         }
         
         .join-us-section {
-            margin-top: 60px;
-            padding-top: 40px;
+            margin-top: 70px; /* More space before this section */
+            padding-top: 50px;
             border-top: 1px solid var(--border);
+        }
+        
+        .join-us-section h3 { /* New heading for this section */
+            font-family: var(--brand-font);
+            font-weight: 700;
+            color: var(--text);
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
         .join-us-section p {
-            font-size: 16px;
-            color: var(--text);
+            font-size: 18px; /* Slightly larger for call to action */
+            color: var(--text-light);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
         }
+        
+        .join-us-section p strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .join-us-section a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .join-us-section a:hover {
+            text-decoration: underline;
+        }
+
 
         footer {
             background-color: var(--background-alt);
@@ -289,13 +325,19 @@
                 transform: none;
             }
             .page-content h1 {
-                font-size: 28px;
+                font-size: 32px;
+            }
+            .page-content .subtitle {
+                font-size: 18px;
             }
             .page-content h2 {
                 font-size: 22px;
             }
-            .page-content p {
+             .page-content p.bio, .join-us-section p {
                 font-size: 16px;
+            }
+            .join-us-section h3 {
+                font-size: 24px;
             }
         }
     </style>
@@ -323,30 +365,19 @@
 
     <main class="page-content">
         <div class="container">
-            <h1 data-aos="fade-down">Our Leadership</h1>
+            <h1 data-aos="fade-down">Meet the Architect</h1>
+            <p class="subtitle" data-aos="fade-down" data-aos-delay="100">One human (for now) laser-focused on untangling your code chaos.</p>
 
-            <div data-aos="fade-up">
-                <h2>Husain Al-Mohssen, PhD - CEO & Founder</h2>
-                <p>
-                    Husain is an AI infrastructure executive with a track record of building sovereign technology systems that have generated over $800M in business value. He has established AI capabilities that scale globally while maintaining data sovereignty and security, and is experienced in presenting technology strategy to boards and C-suites of Fortune 100 companies.
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h2>Husain Al-Mohssen, PhD // CEO & Chief Code Whisperer</h2>
+                <p class="bio">
                 </p>
-                <div class="linkedin-embed-wrapper" data-aos="zoom-in-up" data-aos-delay="200">
-                    <!-- LinkedIn Member Profile Embed Code -->
-                    <!-- This uses the standard LinkedIn Member Profile Plugin. -->
-                    <!-- The script for platform.linkedin.com/in.js is included before the closing </body> tag. -->
+                <div class="linkedin-embed-wrapper" data-aos="zoom-in-up" data-aos-delay="300">
                     <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="husainalmohssen"><a class="LI-simple-link" href='https://www.linkedin.com/in/husainalmohssen?trk=profile-badge'>Husain Al-Mohssen</a></div>
-                    <!-- End LinkedIn Member Profile Embed Code -->
                 </div>
             </div>
 
-            <div class="join-us-section" data-aos="fade-up" data-aos-delay="300">
-                <h2>Building the Future, Together</h2>
-                <p>
-                    ChromeBird is at the forefront of AI-driven code intelligence. We are actively building our foundational team and are always excited to connect with passionate founding engineers, visionary individuals, and potential strategic partners who want to redefine how software is understood and managed.
-                </p>
-                <p>
-                    If you're interested in learning more or exploring opportunities, please feel free to <a href="mailto:careers@chbird.ai" style="color: var(--primary);">reach out</a>.
-                </p>
+            <div class="join-us-section" data-aos="fade-up" data-aos-delay="400">
             </div>
 
         </div>
@@ -376,7 +407,7 @@
                         <h3>Company</h3>
                         <ul>
                             <li><a href="index.html#ai-experts">About Us</a></li>
-                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="team.html">Team</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
                             <li><a href="#">Contact</a></li>
@@ -398,7 +429,6 @@
         </div>
     </footer>
 
-    <!-- LinkedIn Platform Script - Loads the necessary JavaScript for the badge/plugin -->
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -423,3 +453,4 @@
     </script>
 </body>
 </html>
+
