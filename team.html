@@ -159,7 +159,7 @@
             font-family: var(--brand-font);
             font-weight: 900;
             color: var(--text);
-            font-size: 40px; /* Slightly bigger for impact */
+            font-size: 40px; 
             margin-bottom: 25px;
         }
         
@@ -172,18 +172,18 @@
         }
 
 
-        .page-content h2 { /* For section titles like Husain's name */
+        .page-content h2 { 
             font-family: var(--brand-font);
-            font-weight: 700; /* Bold but not 900 */
+            font-weight: 700; 
             color: var(--text);
-            font-size: 26px; /* Adjusted size */
+            font-size: 26px; 
             margin-top: 40px;
-            margin-bottom: 10px; /* Reduced bottom margin */
+            margin-bottom: 10px; 
         }
         
-        .page-content p.bio { /* Specific class for bio text */
-            font-size: 17px; /* Slightly smaller, more direct */
-            color: var(--text); /* Darker for readability */
+        .page-content p.bio { 
+            font-size: 17px; 
+            color: var(--text); 
             margin-bottom: 30px;
             line-height: 1.6;
             max-width: 650px;
@@ -191,20 +191,31 @@
             margin-right: auto;
             font-weight: 400;
         }
+        
+        .team-member-section {
+            margin-bottom: 50px; /* Space between team members */
+        }
 
         .linkedin-embed-wrapper {
-            margin: 20px auto 40px auto; /* Adjusted margins */
-            display: flex;
-            justify-content: center;
+            margin: 20px auto 40px auto; 
+            /* display: flex; */ /* Removed for Safari compatibility with LinkedIn embed */
+            /* justify-content: center; */ /* Removed for Safari compatibility with LinkedIn embed */
+            /* text-align: center; is inherited from .page-content, will center inline-block children */
+        }
+
+        /* Added for Safari compatibility with LinkedIn embed */
+        .LI-profile-badge {
+            display: inline-block;
+            vertical-align: top; /* or middle, depending on desired alignment if other inline elements were present */
         }
         
         .join-us-section {
-            margin-top: 70px; /* More space before this section */
+            margin-top: 70px; 
             padding-top: 50px;
             border-top: 1px solid var(--border);
         }
         
-        .join-us-section h3 { /* New heading for this section */
+        .join-us-section h3 { 
             font-family: var(--brand-font);
             font-weight: 700;
             color: var(--text);
@@ -213,7 +224,7 @@
         }
 
         .join-us-section p {
-            font-size: 18px; /* Slightly larger for call to action */
+            font-size: 18px; 
             color: var(--text-light);
             line-height: 1.7;
             max-width: 600px;
@@ -353,6 +364,7 @@
                 <ul>
                     <li><a href="index.html#ai-experts">About Us</a></li>
                     <li><a href="team.html">Team</a></li>
+                    <li><a href="product.html">Product</a></li>
                     <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
                     <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
                 </ul>
@@ -365,19 +377,38 @@
 
     <main class="page-content">
         <div class="container">
-            <h1 data-aos="fade-down">Meet the Architect</h1>
-            <p class="subtitle" data-aos="fade-down" data-aos-delay="100">One human (for now) laser-focused on untangling your code chaos.</p>
+            <h1 data-aos="fade-down">Meet the Architects</h1>
+            <p class="subtitle" data-aos="fade-down" data-aos-delay="100">The humans laser-focused on untangling your code chaos.</p>
 
-            <div data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member-section" data-aos="fade-up" data-aos-delay="200">
                 <h2>Husain Al-Mohssen, PhD // CEO & Chief Code Whisperer</h2>
                 <p class="bio">
+                    This is Husain. He's the AI brain who's already shipped >$800M in value with deep tech for giants like Walmart & iRobot. MIT PhD, 26+ patents under his belt. Now, he’s obsessed with giving you X-ray vision into your codebase.
                 </p>
-                <div class="linkedin-embed-wrapper" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="linkedin-embed-wrapper" data-aos="zoom-in-up" data-aos-delay="250">
                     <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="husainalmohssen"><a class="LI-simple-link" href='https://www.linkedin.com/in/husainalmohssen?trk=profile-badge'>Husain Al-Mohssen</a></div>
+                </div>
+            </div>
+            
+            <div class="team-member-section" data-aos="fade-up" data-aos-delay="300">
+                <h2>Sean Tempesta // Consultant & Go-To-Market Sage</h2>
+                <p class="bio">
+                    Sean brings the strategic firepower. Expert in navigating the enterprise landscape and crafting winning go-to-market plays. He's helping us connect our deep tech with your biggest challenges.
+                </p>
+                <div class="linkedin-embed-wrapper" data-aos="zoom-in-up" data-aos-delay="350">
+                    <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="seantempesta"><a class="LI-simple-link" href='https://www.linkedin.com/in/seantempesta?trk=profile-badge'>Sean Tempesta</a></div>
                 </div>
             </div>
 
             <div class="join-us-section" data-aos="fade-up" data-aos-delay="400">
+                <h3>Building the Command Center for Code? Hell Yes.</h3>
+                <p>
+                    This isn't just another dev tool. We're crafting the intelligence layer for modern software. <strong>Mad skills in AI/Eng?</strong> Got a vision for what's next?
+                </p>
+                <p>
+                    We're scouting for A-list <strong>founding engineers</strong> and game-changing <strong>strategic partners</strong>.
+                    If you're ready to build something legendary, <a href="mailto:dreamers@chbird.ai">let's talk</a>.
+                </p>
             </div>
 
         </div>
@@ -399,6 +430,7 @@
                         <ul>
                             <li><a href="index.html#ai-experts">Features</a></li>
                             <li><a href="index.html#how-it-works">How It Works</a></li>
+                            <li><a href="product.html">Glimpse</a></li>
                             <li><a href="#">Pricing</a></li>
                             <li><a href="index.html#cta">Newsletter</a></li>
                         </ul>
@@ -408,7 +440,7 @@
                         <ul>
                             <li><a href="index.html#ai-experts">About Us</a></li>
                             <li><a href="team.html">Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="mailto:coldcall@chbird.ai">Careers</a></li>
                             <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
@@ -417,8 +449,7 @@
                         <h3>Legal</h3>
                         <ul>
                             <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Security</a></li>
+                            <!-- Terms of Service and Security links removed as per previous request on index.html, assuming consistency -->
                         </ul>
                     </div>
                 </div>
@@ -447,10 +478,12 @@
                   navUl.style.display = 'none';
               } else {
                   navUl.style.display = 'flex';
+                  // Basic mobile menu should be a column
+                  navUl.style.flexDirection = 'column'; 
+                  // Add more styles if needed for full screen or dropdown appearance
               }
           });
       }
     </script>
 </body>
 </html>
-
