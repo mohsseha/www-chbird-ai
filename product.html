@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>Product Glimpse - ChromeBird // See Beyond the Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5AB0FF; /* Blue 600 */
+            --primary-dark: #3a8cffa6; /* Blue 700 */
+            --accent: #FFD500; /* Yellow */
+            --text: #1e293b; /* Slate 800 */
+            --text-light: #64748b; /* Slate 500 */
+            --background: #ffffff; /* White */
+            --background-alt: #f8fafc; /* Slate 50 */
+            --border: #e2e8f0; /* Slate 200 */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+            --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { color: var(--text); line-height: 1.6; font-size: 16px; background-color: var(--background); font-family: var(--font-body); overflow-x: hidden; }
+        .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        header { background-color: var(--background); box-shadow: var(--shadow-md); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; height: 80px; position: relative; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 24px; font-weight: 900; font-family: var(--brand-font); color: var(--text); display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+        .logo img.logo-img { height: 45px; width: auto; margin-right: 5px; }
+        .header-brand-text { font-weight: bold; }
+        nav { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+        nav ul { display: flex; align-items: center; list-style: none; }
+        nav ul li { margin-left: 20px; margin-right: 20px; }
+        nav ul li a:not(.btn) { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s ease; font-size: 1.3em; }
+        nav ul li a:not(.btn):hover { color: var(--primary); }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 10px; flex-shrink: 0; position: relative; z-index: 2; }
+        .mobile-menu-btn svg { width: 24px; height: 24px; color: var(--text); }
+
+        .page-content { padding-top: 120px; padding-bottom: 80px; text-align: center; }
+        .page-content h1 { font-family: var(--brand-font); font-weight: 900; color: var(--text); font-size: 40px; margin-bottom: 20px; }
+        .page-content .subtitle { font-family: var(--font-body); font-size: 20px; color: var(--text-light); margin-bottom: 60px; font-weight: 400; }
+
+        .swiper-container {
+            width: 100%;
+            max-width: 900px; 
+            margin: 0 auto 40px auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            padding: 20px 0; 
+            background-color: var(--background-alt);
+            position: relative; 
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: var(--background-alt); 
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            flex-direction: column; 
+            padding: 30px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 500px; 
+            object-fit: contain; 
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        .swiper-slide .slide-description {
+            font-size: 18px;
+            color: var(--text);
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+        
+        .swiper-slide .slide-description strong {
+            color: var(--primary);
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--primary); 
+            background-color: rgba(255, 255, 255, 0.7); 
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 20px !important; 
+            font-weight: 900;
+        }
+        .swiper-button-next { right: 10px; }
+        .swiper-button-prev { left: 10px; }
+        
+        .final-cta { margin-top: 80px; font-size: 22px; color: var(--text); font-weight: 500; }
+        .final-cta a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .final-cta a:hover { text-decoration: underline; }
+
+        footer { background-color: var(--background-alt); padding: 60px 0 40px 0; border-top: 1px solid var(--border); }
+        .footer-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; }
+        .footer-about { flex: 1; min-width: 250px; max-width: 350px; }
+        .footer-about .logo { margin-bottom: 15px; font-size: 20px; }
+        .footer-about p { font-size: 14px; margin-bottom: 0; font-family: var(--font-body); }
+        .footer-links { display: flex; flex: 2; justify-content: space-around; flex-wrap: wrap; gap: 40px; }
+        .footer-column { min-width: 150px; }
+        .footer-column h3 { margin-bottom: 15px; font-size: 16px; color: var(--text); font-family: var(--brand-font); font-weight: 700; }
+        .footer-column ul { list-style: none; margin-left: 0; }
+        .footer-column ul li { margin-bottom: 10px; }
+        .footer-column ul li a { text-decoration: none; color: var(--text-light); font-size: 14px; font-family: var(--font-body); transition: color 0.3s ease; }
+        .footer-column ul li a:hover { color: var(--primary); }
+        .copyright { margin-top: 40px; padding-top: 20px; text-align: center; color: var(--text-light); font-size: 14px; font-family: var(--font-body); border-top: 1px solid var(--border); }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .mobile-menu-btn { display: block; }
+            .header-container nav { position: static; transform: none; }
+            .page-content h1 { font-size: 32px; }
+            .page-content .subtitle { font-size: 18px; margin-bottom: 40px; }
+            .swiper-slide { padding: 20px; }
+            .swiper-slide .slide-description { font-size: 16px; }
+            .swiper-button-next, .swiper-button-prev { width: 30px; height: 30px; }
+            .swiper-button-next::after, .swiper-button-prev::after { font-size: 16px !important; }
+            .final-cta { font-size: 18px; margin-top: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                <span class="header-brand-text">ChromeBird</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#ai-experts">About Us</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                    <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1 data-aos="fade-down">This is ChromeBird.</h1>
+            <p class="subtitle" data-aos="fade-down" data-aos-delay="100">A peek under the hood. Where code clarity meets AI power.</p>
+
+            <div class="swiper-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="product-progress.jpg" alt="ChromeBird Project Progress Overview">
+                        <p class="slide-description">The Unseen, Visualized. <strong>Objective progress.</strong> AI-powered foresight. Know where you <em>really</em> stand.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="product-new.jpg" alt="ChromeBird Feature Deep Dive Analysis">
+                        <p class="slide-description">Deep Dive, Instantly. <strong>Feature-level truth.</strong> Bottlenecks revealed. Effort quantified. Control, uncompromised.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="product-proposals.jpg" alt="ChromeBird System Architecture and Q&A">
+                        <p class="slide-description">Command Your Architecture. <strong>Systems mapped.</strong> Connections untangled. Ask anything. Understand <em>everything</em>.</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            
+            <p class="final-cta" data-aos="fade-up" data-aos-delay="300">
+                Intrigued? This is just the beginning. <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" target="_blank" rel="noopener noreferrer">Join the waitlist.</a>
+            </p>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                     <a href="index.html" class="logo">
+                        <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                        ChromeBird
+                    </a>
+                    <p>Making software deeply visible for software teams</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="index.html#ai-experts">Features</a></li>
+                            <li><a href="index.html#how-it-works">How It Works</a></li>
+                            <li><a href="product.html">Glimpse</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="index.html#cta">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html#ai-experts">About Us</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="mailto:coldcall@chbird.ai">Careers</a></li>
+                            <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 ChromeBird Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30, 
+        loop: true, 
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+      
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navUl = document.querySelector('header nav ul');
+
+      if (mobileMenuBtn && navUl) {
+          mobileMenuBtn.addEventListener('click', () => {
+              if (navUl.style.display === 'flex' || navUl.style.display === '') {
+                  navUl.style.display = 'none';
+              } else {
+                  navUl.style.display = 'flex';
+              }
+          });
+      }
+    </script>
+</body>
+</html>
