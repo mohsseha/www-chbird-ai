@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>Our Team - ChromeBird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- AOS CSS (Optional, but included for consistency) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5AB0FF; /* Blue 600 */
+            --primary-dark: #3a8cffa6; /* Blue 700 */
+            --accent: #FFD500; /* Yellow */
+            --text: #1e293b; /* Slate 800 */
+            --text-light: #64748b; /* Slate 500 */
+            --background: #ffffff; /* White */
+            --background-alt: #f8fafc; /* Slate 50 */
+            --border: #e2e8f0; /* Slate 200 */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+            --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            background-color: var(--background);
+            font-family: var(--font-body);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px; /* Consistent with privacy page for content */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--background);
+            box-shadow: var(--shadow-md);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            font-family: var(--brand-font);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo img.logo-img {
+            height: 45px;
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .header-brand-text {
+            font-weight: bold;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        nav ul li a:not(.btn) {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-family: var(--font-body);
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            font-size: 1.3em;
+        }
+
+        nav ul li a:not(.btn):hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+             display: none;
+             background: none;
+             border: none;
+             cursor: pointer;
+             padding: 10px;
+             flex-shrink: 0;
+             position: relative;
+             z-index: 2;
+        }
+
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text);
+        }
+
+        /* Main Content Area for Static Pages */
+        .page-content {
+            padding-top: 120px; /* Space for fixed header */
+            padding-bottom: 60px;
+            text-align: center; /* Center content for team page */
+        }
+
+        .page-content h1 {
+            font-family: var(--brand-font);
+            font-weight: 900;
+            color: var(--text);
+            font-size: 36px;
+            margin-bottom: 40px; /* More space after main title */
+        }
+
+        .page-content h2 {
+            font-family: var(--brand-font);
+            font-weight: 700;
+            color: var(--text);
+            font-size: 28px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .page-content p {
+            font-size: 18px; /* Slightly larger for emphasis */
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.7;
+            max-width: 700px; /* Constrain paragraph width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .linkedin-embed-container {
+            margin: 30px auto;
+            max-width: 400px; /* Adjust as needed based on LinkedIn widget size */
+            /* You might need specific styles here once you have the actual embed code */
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px; /* Optional padding around the embed */
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .join-us-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .join-us-section p {
+            font-size: 16px;
+            color: var(--text); /* Make this text a bit more prominent */
+        }
+
+
+        /* Footer (Same as index.html for consistency) */
+        footer {
+            background-color: var(--background-alt);
+            padding: 60px 0 40px 0;
+            border-top: 1px solid var(--border);
+        }
+        .footer-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-about {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        .footer-about .logo {
+             margin-bottom: 15px;
+             font-size: 20px;
+        }
+        .footer-about p {
+             font-size: 14px;
+             margin-bottom: 0;
+             font-family: var(--font-body);
+        }
+        .footer-links {
+            display: flex;
+            flex: 2;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-column {
+            min-width: 150px;
+        }
+        .footer-column h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: var(--text);
+            font-family: var(--brand-font);
+            font-weight: 700;
+        }
+        .footer-column ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-family: var(--font-body);
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 14px;
+            font-family: var(--font-body);
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+             .header-container nav {
+                position: static;
+                transform: none;
+            }
+            .page-content h1 {
+                font-size: 28px;
+            }
+            .page-content h2 {
+                font-size: 22px;
+            }
+            .page-content p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                <span class="header-brand-text">ChromeBird</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#ai-experts">About Us</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                    <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1 data-aos="fade-down">Our Leadership</h1>
+
+            <div data-aos="fade-up">
+                <h2>Husain Al-Mohssen, PhD - CEO & Founder</h2>
+                <p>
+                    Husain is an AI infrastructure executive with a track record of building sovereign technology systems that have generated over $800M in business value. He has established AI capabilities that scale globally while maintaining data sovereignty and security, and is experienced in presenting technology strategy to boards and C-suites of Fortune 100 companies.
+                </p>
+                <div class="linkedin-embed-container" data-aos="zoom-in-up" data-aos-delay="200">
+                    <!--
+                        IMPORTANT: Replace the content below with the ACTUAL LinkedIn embed code for Husain's profile.
+                        You can usually generate this from Husain's LinkedIn profile (look for "Public profile badge" or similar options)
+                        or from the LinkedIn Developer site.
+
+                        A common (but potentially outdated, always check LinkedIn) way to embed is:
+                        <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                        <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/husainalmohssen/" data-format="inline" data-related="false"></script>
+
+                        The script tag for platform.linkedin.com/in.js is usually placed once, either in the <head> or before the </body>.
+                        Then, the <script type="IN/MemberProfile"...> tag is placed where you want the profile to appear.
+                        Adjust the 'data-id' with the correct profile URL.
+                    -->
+                    <p style="text-align:center; padding: 20px; color: var(--text-light);">
+                        LinkedIn Profile Embed for Husain Al-Mohssen will appear here.
+                        <br><br>
+                        <a href="https://www.linkedin.com/in/husainalmohssen/" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">View Husain's Profile on LinkedIn</a>
+                    </p>
+                    <!-- End of LinkedIn Embed Placeholder -->
+                </div>
+            </div>
+
+            <div class="join-us-section" data-aos="fade-up" data-aos-delay="300">
+                <h2>Building the Future, Together</h2>
+                <p>
+                    ChromeBird is at the forefront of AI-driven code intelligence. We are actively building our foundational team and are always excited to connect with passionate founding engineers, visionary individuals, and potential strategic partners who want to redefine how software is understood and managed.
+                </p>
+                <p>
+                    If you're interested in learning more or exploring opportunities, please feel free to <a href="mailto:careers@chbird.ai" style="color: var(--primary);">reach out</a>.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                     <a href="index.html" class="logo">
+                        <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                        ChromeBird
+                    </a>
+                    <p>Making software deeply visible for software teams</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="index.html#ai-experts">Features</a></li>
+                            <li><a href="index.html#how-it-works">How It Works</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="index.html#cta">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html#ai-experts">About Us</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 ChromeBird Inc. All rights reserved. <!-- Updated Year -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- LinkedIn Platform Script - Place this ONCE per page, ideally before </body> or in <head> -->
+    <!-- <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script> -->
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Mobile Menu Toggle (copy from index.html if you want consistent behavior for mobile nav)
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navUl = document.querySelector('header nav ul');
+
+      if (mobileMenuBtn && navUl) {
+          mobileMenuBtn.addEventListener('click', () => {
+              if (navUl.style.display === 'flex' || navUl.style.display === '') {
+                  navUl.style.display = 'none';
+              } else {
+                  navUl.style.display = 'flex';
+                  // Add further styling for mobile menu appearance if needed here
+              }
+          });
+      }
+    </script>
+</body>
+</html>

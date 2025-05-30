@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/png">
+    <title>Privacy Policy - ChromeBird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- AOS CSS (Optional for simple pages, but included for consistency if you add animations) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5AB0FF; /* Blue 600 */
+            --primary-dark: #3a8cffa6; /* Blue 700 */
+            --accent: #FFD500; /* Yellow */
+            --text: #1e293b; /* Slate 800 */
+            --text-light: #64748b; /* Slate 500 */
+            --background: #ffffff; /* White */
+            --background-alt: #f8fafc; /* Slate 50 */
+            --border: #e2e8f0; /* Slate 200 */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+            --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Adjust if header height changes */
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            background-color: var(--background);
+            font-family: var(--font-body);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px; /* Slightly narrower for content pages */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--background);
+            box-shadow: var(--shadow-md);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            position: relative;
+            max-width: 1200px; /* Keep header consistent with index.html */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            font-family: var(--brand-font);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo img.logo-img {
+            height: 45px;
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .header-brand-text {
+            font-weight: bold;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        nav ul li a:not(.btn) {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-family: var(--font-body);
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            font-size: 1.3em;
+        }
+
+        nav ul li a:not(.btn):hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+             display: none; /* Will be handled by JS from index.html if you reuse it */
+             background: none;
+             border: none;
+             cursor: pointer;
+             padding: 10px;
+             flex-shrink: 0;
+             position: relative;
+             z-index: 2;
+        }
+
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text);
+        }
+
+
+        /* Main Content Area for Static Pages */
+        .page-content {
+            padding-top: 120px; /* Space for fixed header */
+            padding-bottom: 60px;
+        }
+
+        .page-content h1 {
+            font-family: var(--brand-font);
+            font-weight: 900;
+            color: var(--text);
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-content h2 {
+            font-family: var(--brand-font);
+            font-weight: 700;
+            color: var(--text);
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .page-content h3 {
+            font-family: var(--brand-font);
+            font-weight: 700;
+            color: var(--text);
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .page-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .page-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .page-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .page-content strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .emphasis {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .critical-emphasis {
+            color: #D92D20; /* A red for critical points */
+            font-weight: 700;
+            font-style: italic;
+        }
+
+
+        /* Footer (Same as index.html for consistency) */
+        footer {
+            background-color: var(--background-alt);
+            padding: 60px 0 40px 0;
+            border-top: 1px solid var(--border);
+        }
+        .footer-container { /* For footer content to match index.html width */
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-about {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        .footer-about .logo {
+             margin-bottom: 15px;
+             font-size: 20px;
+        }
+        .footer-about p {
+             font-size: 14px;
+             margin-bottom: 0;
+             font-family: var(--font-body);
+        }
+        .footer-links {
+            display: flex;
+            flex: 2;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-column {
+            min-width: 150px;
+        }
+        .footer-column h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: var(--text); /* Ensure footer headings are dark */
+            font-family: var(--brand-font);
+            font-weight: 700;
+        }
+        .footer-column ul {
+            list-style: none;
+            margin-left: 0; /* Reset list style from page-content */
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-family: var(--font-body);
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 14px;
+            font-family: var(--font-body);
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive Design for Nav (Simplified from index.html for brevity) */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .header-container nav { /* Adjust nav positioning for mobile button */
+                position: static;
+                transform: none;
+            }
+            .page-content h1 {
+                font-size: 28px;
+            }
+            .page-content h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                <span class="header-brand-text">ChromeBird</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#ai-experts">About Us</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                    <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p><strong>Last Updated:</strong> <span id="lastUpdatedDate"></span></p>
+
+            <p>At ChromeBird Inc. ("ChromeBird", "we", "us", or "our"), we are committed to protecting your privacy and handling your data with transparency and respect. This Privacy Policy outlines our practices concerning the information we collect from you or that you may provide when you visit our website www.chbird.ai (our "Website") or use our services (collectively, the "Services").</p>
+
+            <h2>Our Core Privacy Commitments:</h2>
+            <p>We want to be upfront about our fundamental principles regarding your data:</p>
+            <ul>
+                <li><strong class="emphasis">Your Data Control:</strong> We believe you should have control over your data. When you provide us with access to your codebase or other proprietary information for analysis, this data is processed to provide you with our Services.</li>
+                <li><strong class="emphasis">Immediate Data Deletion:</strong> We understand the sensitivity of your code and project data. Upon your request, or at the end of our service engagement if specified, <strong class="critical-emphasis">we will immediately delete your codebase data and any derived analytical data specific to your projects from our active systems.</strong></li>
+                <li><strong class="emphasis">We Will *Never* Train on Your Data:</strong> Your proprietary code, project information, and any specific data you provide for analysis through our Services <strong class="critical-emphasis">will *never* be used to train our general AI models or any third-party AI models, regardless of whether you are a paying customer or using a trial/free tier.</strong> Your data is used solely to provide the Services directly to you.</li>
+            </ul>
+
+            <h2>Information We Collect</h2>
+            <p>We may collect several types of information, including:</p>
+            <ul>
+                <li><strong>Information You Provide Directly:</strong>
+                    <ul>
+                        <li>When you sign up for a waitlist, request a demo, or contact us: Name, email address, company name, and any other information you choose to provide.</li>
+                        <li>When you use our Services: Code repositories you connect, project management data you link, and any queries or inputs you make to the system. This is the data subject to our core commitments above.</li>
+                    </ul>
+                </li>
+                <li><strong>Information We Collect Automatically:</strong>
+                    <ul>
+                        <li>As you navigate through the Website, we may use automatic data collection technologies to collect certain information about your equipment, browsing actions, and patterns, including details of your visits to our Website (e.g., traffic data, location data, logs) and information about your computer and internet connection (e.g., your IP address, operating system, and browser type). This is standard anonymous analytics data to help us improve our Website.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>How We Use Your Information</h2>
+            <ul>
+                <li>To provide and improve our Website and Services.</li>
+                <li>To provide you with information, products, or services that you request from us.</li>
+                <li>To fulfill any other purpose for which you provide it.</li>
+                <li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us.</li>
+                <li>To notify you about changes to our Website or any products or services we offer.</li>
+                <li>For internal analytics and research to improve our offerings, <strong class="emphasis">excluding the use of your proprietary codebase or project-specific data for general model training.</strong></li>
+            </ul>
+
+            <h2>Data Security</h2>
+            <p>We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. However, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our Website or Services. Any transmission of personal information is at your own risk.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>Our Website or Services may contain links to other websites or services not operated or controlled by ChromeBird (e.g., Substack for our newsletter, Google Forms for waitlists). The information that you share with third-party sites will be governed by the specific privacy policies and terms of service of the third-party sites and not by this Privacy Policy.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>Our Services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information.</p>
+
+            <h2>Changes to Our Privacy Policy</h2>
+            <p>It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users' personal information, especially regarding our core commitments, we will notify you through a notice on the Website home page or by email to the primary email address specified in your account. The date the privacy policy was last revised is identified at the top of the page.</p>
+
+            <h2>Contact Information</h2>
+            <p>To ask questions or comment about this privacy policy and our privacy practices, please contact us at: <a href="mailto:privacy@chbird.ai">privacy@chbird.ai</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                     <a href="index.html" class="logo">
+                        <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                        ChromeBird
+                    </a>
+                    <p>Making software deeply visible for software teams</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="index.html#ai-experts">Features</a></li>
+                            <li><a href="index.html#how-it-works">How It Works</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="index.html#cta">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="index.html#ai-experts">About Us</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 ChromeBird Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS (optional for this page) -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script>
+      // AOS.init(); // Initialize if you use AOS animations on this page
+
+      // Set the Last Updated Date Dynamically
+      document.getElementById('lastUpdatedDate').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      
+      // Mobile Menu Toggle (copy from index.html if you want consistent behavior for mobile nav)
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navUl = document.querySelector('header nav ul');
+
+      if (mobileMenuBtn && navUl) {
+          mobileMenuBtn.addEventListener('click', () => {
+              if (navUl.style.display === 'flex' || navUl.style.display === '') {
+                  navUl.style.display = 'none';
+              } else {
+                  navUl.style.display = 'flex';
+                  // Add further styling for mobile menu appearance if needed here
+              }
+          });
+      }
+    </script>
+</body>
+</html>

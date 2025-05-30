@@ -26,7 +26,7 @@
 
             --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-            
+
             --hero-text-color: #414b52; /* MODIFIED: New color for hero text */
         }
 
@@ -80,61 +80,60 @@
         .header-container {
             display: flex;
             align-items: center;
-            justify-content: space-between; 
+            justify-content: space-between;
             height: 80px;
-            position: relative; 
+            position: relative;
         }
 
         .logo {
-            font-size: 24px; 
-            font-weight: 900; 
-            font-family: var(--brand-font); 
+            font-size: 24px;
+            font-weight: 900;
+            font-family: var(--brand-font);
             color: var(--text);
             display: flex;
             align-items: center;
             text-decoration: none;
-            flex-shrink: 0; 
-            position: relative; 
-            z-index: 2;         
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
         }
 
         .logo img.logo-img {
-            height: 45px; 
-            width: auto;  
-            margin-right: 5px; 
+            height: 45px;
+            width: auto;
+            margin-right: 5px;
         }
-        
-        /* MODIFIED: Added style for the brand name text in the header */
+
         .header-brand-text {
             font-weight: bold; /* Explicitly 'bold', which is 700 for IBM Plex Sans */
         }
 
         nav {
-            position: absolute; 
-            left: 50%;          
-            top: 50%;           
-            transform: translate(-50%, -50%); 
-            z-index: 1;         
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
         }
 
         nav ul {
-            display: flex; 
+            display: flex;
             align-items: center;
             list-style: none;
-            padding: 0; 
-            margin: 0;  
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li {
-            margin-left: 20px; 
-            margin-right: 20px; 
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         nav ul li a:not(.btn) {
             text-decoration: none;
             color: var(--text);
-            font-weight: 500; 
-            font-family: var(--font-body); 
+            font-weight: 500;
+            font-family: var(--font-body);
             transition: color 0.3s ease;
             padding: 5px 0;
             font-size: 1.3em; /* MODIFIED: Increased font size by 30% (1em default * 1.3) */
@@ -145,14 +144,14 @@
         }
 
         .mobile-menu-btn {
-             display: none; 
+             display: none;
              background: none;
              border: none;
              cursor: pointer;
              padding: 10px;
              flex-shrink: 0;
-             position: relative; 
-             z-index: 2;         
+             position: relative;
+             z-index: 2;
         }
 
         .mobile-menu-btn svg {
@@ -168,8 +167,8 @@
             background-color: var(--primary);
             color: white !important;
             border-radius: 6px;
-            font-weight: 600; 
-            font-family: var(--font-body); 
+            font-weight: 600;
+            font-family: var(--font-body);
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
             border: none;
@@ -183,7 +182,7 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
-        
+
         .btn-large {
             padding: 16px 32px;
             font-size: 18px;
@@ -201,28 +200,28 @@
 
         /* Hero Section */
         #hero {
-            padding-top: 120px; 
-            padding-bottom: 60px; 
-            min-height: auto; 
+            padding-top: 120px;
+            padding-bottom: 60px;
+            min-height: auto;
             display: flex;
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            position: relative; 
-            overflow: hidden; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
 
         #hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('background.png'); 
+            background-image: url('background.png');
             background-size: cover;
             background-position: center;
-            filter: blur(5px); 
-            z-index: -1; 
+            filter: blur(5px);
+            z-index: -1;
             animation: animatedBackground 30s linear infinite alternate;
-            transform: scale(1.1); 
+            transform: scale(1.1);
         }
 
         @keyframes animatedBackground {
@@ -234,29 +233,29 @@
 
         .hero-content {
             display: flex;
-            flex-direction: column; 
-            align-items: center;    
-            text-align: center;     
-            gap: 25px; 
-            z-index: 1; 
-            width: 100%; 
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+            z-index: 1;
+            width: 100%;
         }
 
         .hero-text {
-            max-width: 650px; 
+            max-width: 650px;
         }
-        
-        .hero-image-wrapper { 
-            position: relative; 
+
+        .hero-image-wrapper {
+            position: relative;
             width: 100%;
-            max-width: 900px; 
+            max-width: 900px;
             aspect-ratio: 16 / 10;
-            margin: 30px auto 0 auto; 
-            z-index: 5; 
+            margin: 30px auto 0 auto;
+            z-index: 5;
             border-radius: 16px; /* MODIFIED: More rounded */
-            box-shadow: var(--shadow-lg); 
-            overflow: hidden; 
-            background-color: var(--background-alt); 
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            background-color: var(--background-alt);
             border: 3px solid #adb5bd; /* MODIFIED: Added chrome-like border */
             /* ANIMATION STYLES */
             transform-style: preserve-3d;
@@ -268,29 +267,29 @@
         .hero-image-wrapper img {
             display: block;
             width: 100%;
-            height: 100%; 
-            object-fit: cover; 
-            object-position: center; 
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
 
         /* Headings Typography */
         h1, h2, h3 {
-            font-family: var(--brand-font); 
-            font-weight: 900; 
+            font-family: var(--brand-font);
+            font-weight: 900;
             color: var(--text);
-            line-height: 1.2; 
+            line-height: 1.2;
         }
 
         h1 {
-            font-size: 48px; 
+            font-size: 48px;
             margin-bottom: 20px;
         }
-        #hero h1 { 
+        #hero h1 {
             font-size: 55px;
             color: var(--hero-text-color); /* MODIFIED */
             /* Glow effect for hero H1 */
-            text-shadow: 
+            text-shadow:
                 0 0 5px rgba(255, 255, 255, 0.6),  /* Inner subtle white glow */
                 0 0 10px rgba(255, 255, 255, 0.4), /* Outer subtle white glow */
                 0 0 10px var(--background); /* Optional colored glow, adjust color and opacity */
@@ -299,27 +298,27 @@
             color: var(--hero-text-color);  /* MODIFIED */
             opacity: 0.9; /* Slightly less prominent than h1 */
              /* Glow effect for hero lead paragraph */
-            text-shadow: 
+            text-shadow:
                 0 0 5px rgba(255, 255, 255, 0.5),
                 0 0 8px rgba(255, 255, 255, 0.3);
         }
 
 
         h2 {
-            font-size: 36px; 
+            font-size: 36px;
             margin-bottom: 15px;
             line-height: 1.3;
         }
 
-        h3 { 
-            font-size: 20px; 
+        h3 {
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
         p {
             margin-bottom: 20px;
             color: var(--text-light);
-            font-size: 18px; 
+            font-size: 18px;
             font-family: var(--font-body);
         }
 
@@ -330,7 +329,7 @@
         }
 
         .hero-cta {
-            margin-top: 10px; 
+            margin-top: 10px;
         }
 
         /* Section Header */
@@ -344,7 +343,7 @@
         .section-header h2 {
             position: relative;
             display: inline-block;
-            margin-bottom: 25px; 
+            margin-bottom: 25px;
         }
         .section-header h2::after {
             content: '';
@@ -364,21 +363,21 @@
         }
 
         /* AI Experts & Partners Section */
-        #ai-experts {
-            padding-top: 100px; 
+        #ai-experts { /* "About Us" menu item links here */
+            padding-top: 100px;
         }
         .partner-logos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 50px; 
-            margin-top: 50px; 
+            gap: 50px;
+            margin-top: 50px;
         }
         .partner-logos img {
-            height: 45px; 
+            height: 45px;
             width: auto;
-            max-width: 160px; 
+            max-width: 160px;
             filter: grayscale(100%);
             opacity: 0.65;
             transition: filter 0.3s ease, opacity 0.3s ease;
@@ -389,8 +388,8 @@
         }
         #ai-experts .highlight-text {
             text-align: center;
-            font-weight: 600; 
-            color: var(--text); 
+            font-weight: 600;
+            color: var(--text);
             margin-top: 40px;
             font-size: 18px;
             font-family: var(--font-body);
@@ -423,7 +422,7 @@
             box-shadow: var(--shadow-md);
         }
         .pain-point-icon {
-            margin: 0 auto 20px auto; 
+            margin: 0 auto 20px auto;
             width: 50px;
             height: 50px;
             background-color: rgba(37, 99, 235, 0.1);
@@ -437,8 +436,8 @@
             width: 24px;
             height: 24px;
         }
-        .pain-point h3 { 
-            font-size: 18px; 
+        .pain-point h3 {
+            font-size: 18px;
         }
         .pain-point p {
             font-size: 16px;
@@ -477,9 +476,9 @@
             .step:not(:last-child)::after {
                 content: '';
                 position: absolute;
-                top: 40px; 
-                right: calc(-50% + 60px); 
-                width: calc(100% - 120px); 
+                top: 40px;
+                right: calc(-50% + 60px);
+                width: calc(100% - 120px);
                 height: 2px;
                 background-image: linear-gradient(to right, var(--border) 50%, transparent 50%);
                 background-size: 10px 2px;
@@ -498,13 +497,13 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 24px;
-            font-weight: 700; 
-            font-family: var(--font-body); 
+            font-weight: 700;
+            font-family: var(--font-body);
             box-shadow: var(--shadow-md);
-            border: 4px solid var(--background); 
+            border: 4px solid var(--background);
         }
-        .step h3 { 
-            font-size: 18px; 
+        .step h3 {
+            font-size: 18px;
             margin-bottom: 5px;
         }
         .step p {
@@ -533,7 +532,7 @@
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex; 
+            display: flex;
             gap: 20px;
         }
         .benefit:hover {
@@ -542,16 +541,16 @@
         }
         .benefit-icon {
             color: var(--primary);
-            font-size: 24px; 
-            flex-shrink: 0; 
-            margin-top: 3px; 
+            font-size: 24px;
+            flex-shrink: 0;
+            margin-top: 3px;
         }
         .benefit-icon svg {
             width: 28px;
             height: 28px;
         }
-        .benefit-text h3 { 
-            font-size: 18px; 
+        .benefit-text h3 {
+            font-size: 18px;
             margin-bottom: 5px;
         }
         .benefit-text p {
@@ -562,15 +561,15 @@
 
         /* CTA Section (Newsletter) */
         #cta {
-            background-color: var(--primary); 
+            background-color: var(--primary);
             color: white;
             text-align: center;
-            padding: 80px 0; 
+            padding: 80px 0;
         }
         #cta h2 { /* Retained for potential future h2 in CTA */
             color: white;
-            font-family: var(--brand-font); 
-            font-size: 32px; 
+            font-family: var(--brand-font);
+            font-size: 32px;
         }
         /* MODIFIED: Style for the newsletter link */
         #cta .container > a {
@@ -589,20 +588,20 @@
         }
         /* END MODIFIED */
 
-        #cta p:not(.newsletter-fallback) { 
+        #cta p:not(.newsletter-fallback) {
             color: white;
-            max-width: 700px; 
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 30px; 
+            margin-bottom: 30px;
             opacity: 0.9;
-            font-family: var(--font-body); 
+            font-family: var(--font-body);
             font-size: 18px;
         }
         #cta iframe { /* This style was present but no iframe in current HTML for CTA */
-            max-width: 100%; 
-            margin: 0 auto; 
-            display: block; 
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
         }
         .newsletter-fallback { /* This style was present but no element with this class in current HTML for CTA */
             margin-top: 20px;
@@ -610,7 +609,7 @@
             opacity: 0.9;
         }
         .newsletter-fallback a {
-            color: var(--accent) !important; 
+            color: var(--accent) !important;
             text-decoration: underline;
             font-weight: 500;
         }
@@ -622,7 +621,7 @@
         /* Footer */
         footer {
             background-color: var(--background-alt);
-            padding: 60px 0 40px 0; 
+            padding: 60px 0 40px 0;
             border-top: 1px solid var(--border);
         }
         .footer-content {
@@ -635,11 +634,11 @@
         .footer-about {
             flex: 1;
             min-width: 250px;
-            max-width: 350px; 
+            max-width: 350px;
         }
         .footer-about .logo {
              margin-bottom: 15px;
-             font-size: 20px; 
+             font-size: 20px;
         }
         .footer-about p {
              font-size: 14px;
@@ -649,16 +648,16 @@
         .footer-links {
             display: flex;
             flex: 2;
-            justify-content: space-around; 
+            justify-content: space-around;
             flex-wrap: wrap;
-            gap: 40px; 
+            gap: 40px;
         }
         .footer-column {
             min-width: 150px;
         }
-        .footer-column h3 { 
+        .footer-column h3 {
             margin-bottom: 15px;
-            font-size: 16px; 
+            font-size: 16px;
         }
         .footer-column ul {
             list-style: none;
@@ -670,7 +669,7 @@
             text-decoration: none;
             color: var(--text-light);
             font-size: 14px;
-            font-family: var(--font-body); 
+            font-family: var(--font-body);
             transition: color 0.3s ease;
         }
         .footer-column ul li a:hover {
@@ -682,24 +681,24 @@
             text-align: center;
             color: var(--text-light);
             font-size: 14px;
-            font-family: var(--font-body); 
+            font-family: var(--font-body);
             border-top: 1px solid var(--border);
         }
 
         /* Responsive Design */
         @media (max-width: 991px) {
             #hero {
-                padding-bottom: 40px; 
+                padding-bottom: 40px;
             }
-            .hero-content { 
-                gap: 30px; 
+            .hero-content {
+                gap: 30px;
             }
             #ai-experts {
-                padding-top: 80px; 
+                padding-top: 80px;
             }
              .steps {
                  flex-direction: column;
-                 align-items: center; 
+                 align-items: center;
              }
             .step {
                 min-width: 100%;
@@ -708,12 +707,12 @@
         }
 
         @media (max-width: 768px) {
-            h1, #hero h1 { 
+            h1, #hero h1 {
                 font-size: 36px;
             }
             h2, #cta h2 { font-size: 28px; } /* #cta h2 might not exist if only link is used */
             p, p.lead { font-size: 16px; }
-            
+
             /* Responsive adjustment for newsletter link */
             #cta .container > a {
                 font-size: 24px; /* Slightly smaller on smaller screens */
@@ -724,23 +723,23 @@
 
 
             nav ul {
-                display: none; 
+                display: none;
             }
             .mobile-menu-btn {
-                display: block; 
+                display: block;
             }
 
-            section { padding: 60px 0; } 
+            section { padding: 60px 0; }
             #hero {
-                 padding-top: 100px; 
-                 padding-bottom: 30px; 
+                 padding-top: 100px;
+                 padding-bottom: 30px;
             }
             .hero-image-wrapper {
                 margin-top: 10px;
-                max-height: 350px; 
+                max-height: 350px;
             }
-             #ai-experts { 
-                 padding-top: 60px; 
+             #ai-experts {
+                 padding-top: 60px;
             }
             .partner-logos {
                 gap: 30px;
@@ -750,8 +749,8 @@
                 max-width: 120px;
             }
             #cta iframe {
-                width: 100%; 
-                max-width: 400px; 
+                width: 100%;
+                max-width: 400px;
             }
             .footer-content {
                  flex-direction: column;
@@ -768,10 +767,10 @@
         }
          @media (max-width: 480px) {
             #cta iframe {
-                height: 180px; 
+                height: 180px;
             }
             .hero-image-wrapper {
-                max-height: 280px; 
+                max-height: 280px;
             }
             /* Further responsive adjustment for newsletter link */
             #cta .container > a {
@@ -783,14 +782,14 @@
 <body>
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo"> <!-- Changed # to index.html for clarity -->
                 <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
-                <!-- MODIFIED: Wrapped brand name in a span for specific styling -->
                 <span class="header-brand-text">ChromeBird</span>
             </a>
             <nav>
                 <ul>
-                    <li><a href="#ai-experts">About Us</a></li>
+                    <li><a href="index.html#ai-experts">About Us</a></li> <!-- Ensures it links to section on index.html -->
+                    <li><a href="team.html">Team</a></li> <!-- NEW LINK -->
                     <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
                     <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
                 </ul>
@@ -821,6 +820,7 @@
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <h2>Built by world-class experts in AI</h2>
+                    <!-- Consider adding a short paragraph here about Husain's leadership and core team expertise based on feedback -->
                 </div>
                 <div class="partner-logos">
                     <img src="mit.png" alt="MIT Logo" data-aos="zoom-in" data-aos-delay="100">
@@ -828,6 +828,7 @@
                     <img src="darpa.png" alt="DARPA Logo" data-aos="zoom-in" data-aos-delay="300">
                     <img src="irobot.png" alt="iRobot Logo" data-aos="zoom-in" data-aos-delay="400">
                 </div>
+                 <!-- Could add a call to action to the team page here if desired -->
             </div>
         </section>
 
@@ -836,6 +837,7 @@
                 <div class="section-header" data-aos="fade-up">
                     <h2>Decisions Made in the Dark?</h2>
                     <p data-aos="fade-up" data-aos-delay="100">Your business runs on code, but key decisions often rely on gut feelings and filtered updates, leading to costly disconnects.</p>
+                    <!-- This is a good place to expand on the "Business" aspect based on Nicole's feedback -->
                 </div>
                 <div class="pain-points">
                     <div class="pain-point" data-aos="fade-up" data-aos-delay="200">
@@ -866,7 +868,8 @@
         <section id="how-it-works" class="section-alt">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2>3 Simple Steps</h2>
+                    <h2>3 Simple Steps to Clarity</h2> <!-- Slightly modified title -->
+                     <!-- This is a good place to expand on the "Product" aspect based on Nicole's feedback -->
                 </div>
                 <div class="steps">
                     <div class="step" data-aos="fade-right" data-aos-delay="100">
@@ -877,22 +880,23 @@
                     <div class="step" data-aos="fade-up" data-aos-delay="200">
                         <div class="step-number">2</div>
                         <h3>Analyze</h3>
-                        <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns.</p>
+                        <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns to build a deep understanding.</p> <!-- Added detail -->
                     </div>
                     <div class="step" data-aos="fade-left" data-aos-delay="300">
                         <div class="step-number">3</div>
                         <h3>Action</h3>
-                        <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and deep insights.</p>
+                        <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and deep insights to drive decisions.</p> <!-- Added detail -->
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
         <section id="benefits">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2>Why ChromeBird</h2>
+                    <h2>Why ChromeBird?</h2>
+                    <!-- This is a good place to expand on the "Product" benefits based on Nicole's feedback -->
                 </div>
                 <!-- TODO: add the 3 ROI metrics -->
                 <div class="benefits">
@@ -928,10 +932,10 @@
         </section>
 
         <section id="cta">
-            <div class="container">            
-                <a href="https://chromebird.substack.com/subscribe" target="_blank" rel="noopener noreferrer" data-aos="fade-down">Subscribe to our Enterprise AI Newsletter</a>            
+            <div class="container">
+                <a href="https://chromebird.substack.com/subscribe" target="_blank" rel="noopener noreferrer" data-aos="fade-down">Subscribe to our Enterprise AI Newsletter</a>
                 <p data-aos="fade-down" data-aos-delay="100">
-                    Bi-weekly insights on the world of AI, code intelligence, and software development.                     
+                    Bi-weekly insights on the world of AI, code intelligence, and software development.
                 </p>
             </div>
         </section>
@@ -941,9 +945,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about" data-aos="fade-up">
-                     <a href="#" class="logo">
+                     <a href="index.html" class="logo"> <!-- Changed # to index.html -->
                         <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
-                        ChromeBird <!-- This will remain 900 weight from .logo class -->
+                        ChromeBird
                     </a>
                     <p>Making software deeply visible for software teams</p>
                 </div>
@@ -951,33 +955,34 @@
                     <div class="footer-column">
                         <h3>Product</h3>
                         <ul>
-                            <li><a href="#ai-experts">Features</a></li>
-                            <li><a href="#how-it-works">How It Works</a></li>
-                            <li><a href="#">Pricing</a></li>
+                            <li><a href="index.html#ai-experts">Features</a></li> <!-- Ensure correct anchor for current page -->
+                            <li><a href="index.html#how-it-works">How It Works</a></li> <!-- Ensure correct anchor for current page -->
+                            <li><a href="#">Pricing</a></li> <!-- Placeholder, update when ready -->
                             <li><a href="#cta">Newsletter</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Company</h3>
                         <ul>
-                            <li><a href="#ai-experts">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="index.html#ai-experts">About Us</a></li> <!-- Ensure correct anchor -->
+                            <li><a href="team.html">Our Team</a></li> <!-- NEW LINK -->
+                            <li><a href="#">Careers</a></li> <!-- Placeholder, update when ready -->
                             <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Contact</a></li> <!-- Placeholder, update when ready -->
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h3>Legal</h3>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Security</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li> <!-- NEW LINK -->
+                            <li><a href="#">Terms of Service</a></li> <!-- Placeholder, update when ready -->
+                            <li><a href="#">Security</a></li> <!-- Placeholder, update when ready -->
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright" data-aos="fade-in" data-aos-delay="200">
-                © 2025 ChromeBird Inc. All rights reserved.
+                © 2024 ChromeBird Inc. All rights reserved. <!-- Updated year -->
             </div>
         </div>
     </footer>
@@ -995,17 +1000,18 @@
       let lastScrollY = window.pageYOffset;
 
       function animateDashboard() {
+        if (!dashboardWrapper) return; // Defensive check
         const currentScrollY = window.pageYOffset;
-        
+
         // Determine scroll direction and position
         if (currentScrollY <= 50) {
-          // At the top - lean forward 30 degrees
+          // At the top - lean forward
           dashboardWrapper.style.transform = 'perspective(1000px) rotateX(12deg)';
         } else {
           // Scrolled down - stand upright
           dashboardWrapper.style.transform = 'perspective(1000px) rotateX(0deg)';
         }
-        
+
         lastScrollY = currentScrollY;
       }
 
@@ -1024,6 +1030,26 @@
       window.addEventListener('scroll', handleScroll);
       window.addEventListener('load', animateDashboard);
       window.addEventListener('resize', animateDashboard);
+
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navUl = document.querySelector('header nav ul'); // Assuming this is the element to show/hide
+
+      if (mobileMenuBtn && navUl) {
+          mobileMenuBtn.addEventListener('click', () => {
+              // This is a very basic toggle. You might want a more sophisticated slide-in/out animation.
+              if (navUl.style.display === 'flex' || navUl.style.display === '') { // Check if it's visible or initial state
+                  navUl.style.display = 'none'; // Hide it
+              } else {
+                  navUl.style.display = 'flex'; // Show it
+                  // For a mobile menu, you'd typically want it to be block or flex-column and styled differently
+                  // This is a quick toggle and would need further styling for a proper mobile menu experience.
+                  // e.g., navUl.style.flexDirection = 'column'; navUl.style.position = 'absolute'; etc.
+              }
+          });
+      }
+
     </script>
 </body>
 </html>
