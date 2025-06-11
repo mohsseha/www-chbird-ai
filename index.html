@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Wistia Scripts -->
+    <script src="https://fast.wistia.com/player.js" async></script>
+    <script src="https://fast.wistia.com/embed/ej48csuf08.js" async type="module"></script>
     <style>
         :root {
             --primary: #5AB0FF; /* Blue 600 */
@@ -28,6 +31,14 @@
             --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
             
             --hero-text-color: #414b52; /* MODIFIED: New color for hero text */
+        }
+
+        /* Wistia player styling */
+        wistia-player[media-id='ej48csuf08']:not(:defined) { 
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ej48csuf08/swatch'); 
+            display: block; 
+            filter: blur(5px); 
+            padding-top:54.79%; 
         }
 
         [data-aos] { /* Prevents flash of unstyled content before AOS kicks in for some animations */
@@ -879,7 +890,7 @@
                     </div>
                 </div>
                 <div class="hero-image-wrapper" data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="1000" id="dashboard-image">
-                    <img src="dashboard.png" alt="ChromeBird dashboard showing codebase insights" />
+                    <wistia-player media-id="ej48csuf08" aspect="1.8250950570342206"></wistia-player>
                 </div>
             </div>
         </section>
