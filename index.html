@@ -212,6 +212,61 @@
             font-size: 18px;
         }
 
+        /* Header buttons container */
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Login button styles */
+        .btn-login {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: white;
+            color: var(--primary) !important;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            font-weight: 600; 
+            font-family: var(--font-body); 
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .btn-login:hover {
+            background-color: var(--primary);
+            color: white !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Get Early Access button styles */
+        .btn-early-access {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary);
+            color: white !important;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            font-weight: 600; 
+            font-family: var(--font-body); 
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .btn-early-access:hover {
+            background-color: #3a8cffa6;
+            border-color: #3a8cffa6;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
         /* Sections */
         section {
             padding: 100px 0;
@@ -769,6 +824,16 @@
                 display: none; 
             }
             
+            /* Hide Get Early Access button at same breakpoint as nav */
+            .btn-early-access {
+                display: none;
+            }
+            
+            /* Keep Login button visible on tablet */
+            .header-buttons {
+                display: flex;
+            }
+            
             #hero {
                 padding-bottom: 40px; 
             }
@@ -809,6 +874,15 @@
             }
             .mobile-menu-btn {
                 display: block; 
+            }
+
+            /* Responsive header buttons on mobile */
+            .header-buttons {
+                gap: 8px;
+            }
+            .btn-login, .btn-early-access {
+                padding: 6px 12px;
+                font-size: 12px;
             }
 
             section { padding: 60px 0; } 
@@ -876,6 +950,10 @@
                     <li><a href="https://chromebird.substack.com/t/partners" target="_blank" rel="noopener noreferrer">Partners</a></li>
                 </ul>
             </nav>
+            <div class="header-buttons">
+                <a href="https://app.chbird.ai/" class="btn-login" target="_blank" rel="noopener noreferrer">Login</a>
+                <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" class="btn-early-access" target="_blank" rel="noopener noreferrer">Get Early Access</a>
+            </div>
         </div>
     </header>
 
@@ -886,7 +964,7 @@
                     <h1 data-aos="fade-down" data-aos-duration="800">Deep Visibility into your Complex Codebase</h1>
                     <p class="lead" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">Measure implementation & effort for your projects</p>
                     <div class="hero-cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
-                        <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" class="btn btn-large">Join Waitlist</a>
+                        <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" class="btn btn-large">Get Early Access</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper" data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="1000" id="dashboard-image">
