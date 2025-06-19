@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logo.png" type="image/png">
-    <title>Privacy Policy - ChromeBird</title>
+    <title>Terms of Service - ChromeBird | AI Deep Visibility</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- AOS CSS (Optional for simple pages, but included for consistency if you add animations) -->
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
@@ -26,6 +26,16 @@
 
             --brand-font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --font-body: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            
+            --hero-text-color: #414b52; /* MODIFIED: New color for hero text */
+        }
+
+        [data-aos] { /* Prevents flash of unstyled content before AOS kicks in for some animations */
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
         }
 
         * {
@@ -45,6 +55,7 @@
             font-size: 16px;
             background-color: var(--background);
             font-family: var(--font-body);
+            overflow-x: hidden; /* Prevent horizontal scrollbar if AOS elements peek out */
         }
 
         .container {
@@ -103,63 +114,64 @@
         .header-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; 
             height: 80px;
-            position: relative;
+            position: relative; 
             max-width: 1200px; /* Keep header consistent with index.html */
             margin: 0 auto;
             padding: 0 20px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 900;
-            font-family: var(--brand-font);
+            font-size: 24px; 
+            font-weight: 900; 
+            font-family: var(--brand-font); 
             color: var(--text);
             display: flex;
             align-items: center;
             text-decoration: none;
-            flex-shrink: 0;
-            position: relative;
-            z-index: 2;
+            flex-shrink: 0; 
+            position: relative; 
+            z-index: 2;         
         }
 
         .logo img.logo-img {
-            height: 45px;
-            width: auto;
-            margin-right: 5px;
+            height: 45px; 
+            width: auto;  
+            margin-right: 5px; 
         }
-
+        
+        /* MODIFIED: Added style for the brand name text in the header */
         .header-brand-text {
-            font-weight: bold;
+            font-weight: bold; /* Explicitly 'bold', which is 700 for IBM Plex Sans */
         }
 
         nav {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
+            position: absolute; 
+            left: 50%;          
+            top: 50%;           
+            transform: translate(-50%, -50%); 
+            z-index: 1;         
         }
 
         nav ul {
-            display: flex;
+            display: flex; 
             align-items: center;
             list-style: none;
-            padding: 0;
-            margin: 0;
+            padding: 0; 
+            margin: 0;  
         }
 
         nav ul li {
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 20px; 
+            margin-right: 20px; 
         }
 
         nav ul li a:not(.btn) {
             text-decoration: none;
             color: var(--text);
-            font-weight: 500;
-            font-family: var(--font-body);
+            font-weight: 500; 
+            font-family: var(--font-body); 
             transition: color 0.3s ease;
             padding: 5px 0;
             font-size: 16px; /* MODIFIED: Changed from 1.3em to 16px for consistency */
@@ -168,7 +180,30 @@
         nav ul li a:not(.btn):hover {
             color: var(--primary);
         }
-        
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white !important;
+            border-radius: 6px;
+            font-weight: 600; 
+            font-family: var(--font-body); 
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
         /* Header buttons container */
         .header-buttons {
             display: flex;
@@ -224,7 +259,6 @@
             box-shadow: var(--shadow-sm);
         }
 
-
         /* Main Content Area for Static Pages */
         .page-content {
             padding-top: 120px; /* Space for fixed header */
@@ -248,7 +282,7 @@
             margin-top: 40px;
             margin-bottom: 15px;
         }
-        
+
         .page-content h3 {
             font-family: var(--brand-font);
             font-weight: 700;
@@ -285,13 +319,12 @@
             color: var(--primary);
             font-weight: 700;
         }
-        
+
         .critical-emphasis {
             color: #D92D20; /* A red for critical points */
             font-weight: 700;
             font-style: italic;
         }
-
 
         /* Footer (same as index.html) */
         footer {
@@ -434,7 +467,7 @@
         }
 
         @media (max-width: 768px) {
-            .page-content h1 {
+            .page-content h1 { 
                 font-size: 36px;
             }
             .page-content h2 { font-size: 28px; }
@@ -443,6 +476,9 @@
             /* Hide nav by default on mobile */
             nav ul {
                 display: none; 
+            }
+            .mobile-menu-btn {
+                display: block; 
             }
 
             /* Responsive header buttons on mobile */
@@ -471,12 +507,13 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
+        <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="logo.png" alt="ChromeBird Logo" class="logo-img">
+                <!-- MODIFIED: Wrapped brand name in a span for specific styling -->
                 <span class="header-brand-text">ChromeBird</span>
             </a>
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html#ai-experts">About Us</a></li>
                     <li><a href="https://chromebird.substack.com/t/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
@@ -492,60 +529,56 @@
 
     <main class="page-content">
         <div class="container">
-            <h1 data-aos="fade-down">Privacy Policy</h1>
+            <h1 data-aos="fade-down">Terms of Service</h1>
             <p data-aos="fade-up" data-aos-delay="100"><strong>Last Updated:</strong> <span id="lastUpdatedDate"></span></p>
 
             <div data-aos="fade-up" data-aos-delay="200">
-                <p>At ChromeBird Inc. ("ChromeBird", "we", "us", or "our"), we are committed to protecting your privacy and handling your data with transparency and respect. This Privacy Policy outlines our practices concerning the information we collect from you or that you may provide when you visit our website www.chbird.ai (our "Website") or use our services (collectively, the "Services").</p>
+                <p>Welcome to ChromeBird Inc. ("ChromeBird", "we", "us", or "our"). These Terms of Service ("Terms") govern your use of our website www.chbird.ai and our services (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms.</p>
 
-            <h2>Our Core Privacy Commitments:</h2>
-            <p>We want to be upfront about our fundamental principles regarding your data:</p>
-            <ul>
-                <li><strong class="emphasis">Your Data Control:</strong> We believe you should have control over your data. When you provide us with access to your codebase or other proprietary information for analysis, this data is processed to provide you with our Services.</li>
-                <li><strong class="emphasis">Immediate Data Deletion:</strong> We understand the sensitivity of your code and project data. Upon your request, or at the end of our service engagement if specified, <strong class="critical-emphasis">we will immediately delete your codebase data and any derived analytical data specific to your projects from our active systems.</strong></li>
-                <li><strong class="emphasis">We Will *Never* Train on Your Data:</strong> Your proprietary code, project information, and any specific data you provide for analysis through our Services <strong class="critical-emphasis">will *never* be used to train our general AI models or any third-party AI models, regardless of whether you are a paying customer or using a trial/free tier.</strong> Your data is used solely to provide the Services directly to you.</li>
-            </ul>
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing and using our Services, you accept and agree to be bound by the terms and provision of this agreement. Additionally, when using our Services, you shall be subject to any posted guidelines or rules applicable to such services.</p>
 
-            <h2>Information We Collect</h2>
-            <p>We may collect several types of information, including:</p>
-            <ul>
-                <li><strong>Information You Provide Directly:</strong>
-                    <ul>
-                        <li>When you sign up for a waitlist, request a demo, or contact us: Name, email address, company name, and any other information you choose to provide.</li>
-                        <li>When you use our Services: Code repositories you connect, project management data you link, and any queries or inputs you make to the system. This is the data subject to our core commitments above.</li>
-                    </ul>
-                </li>
-                <li><strong>Information We Collect Automatically:</strong>
-                    <ul>
-                        <li>As you navigate through the Website, we may use automatic data collection technologies to collect certain information about your equipment, browsing actions, and patterns, including details of your visits to our Website (e.g., traffic data, location data, logs) and information about your computer and internet connection (e.g., your IP address, operating system, and browser type). This is standard anonymous analytics data to help us improve our Website.</li>
-                    </ul>
-                </li>
-            </ul>
+                <h2>2. Use of Services</h2>
+                <p>You may use our Services only for lawful purposes and in accordance with these Terms. You agree not to use the Services:</p>
+                <ul>
+                    <li>In any way that violates any applicable federal, state, local, or international law or regulation</li>
+                    <li>To transmit, or procure the sending of, any advertising or promotional material, or any other form of similar solicitation ("spam")</li>
+                    <li>To impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person or entity</li>
+                    <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Services</li>
+                </ul>
 
-            <h2>How We Use Your Information</h2>
-            <ul>
-                <li>To provide and improve our Website and Services.</li>
-                <li>To provide you with information, products, or services that you request from us.</li>
-                <li>To fulfill any other purpose for which you provide it.</li>
-                <li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us.</li>
-                <li>To notify you about changes to our Website or any products or services we offer.</li>
-                <li>For internal analytics and research to improve our offerings, <strong class="emphasis">excluding the use of your proprietary codebase or project-specific data for general model training.</strong></li>
-            </ul>
+                <h2>3. Code Analysis and Data Processing</h2>
+                <p>When you connect your code repositories to our Services:</p>
+                <ul>
+                    <li><strong class="emphasis">Limited Access:</strong> We only access and analyze the code you explicitly grant us permission to review</li>
+                    <li><strong class="emphasis">Analysis Purpose:</strong> Your code is processed solely to provide you with insights, metrics, and analytics through our Services</li>
+                    <li><strong class="critical-emphasis">No Training Use:</strong> Your proprietary code and project data will never be used to train our AI models or any third-party models</li>
+                    <li><strong class="emphasis">Data Retention:</strong> We retain your code analysis data only as long as necessary to provide the Services, and it can be deleted upon request</li>
+                </ul>
 
-            <h2>Data Security</h2>
-            <p>We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. However, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our Website or Services. Any transmission of personal information is at your own risk.</p>
+                <h2>4. User Accounts</h2>
+                <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. You are responsible for safeguarding the password and for maintaining the confidentiality of your account.</p>
 
-            <h2>Third-Party Services</h2>
-            <p>Our Website or Services may contain links to other websites or services not operated or controlled by ChromeBird (e.g., Substack for our newsletter, Google Forms for waitlists). The information that you share with third-party sites will be governed by the specific privacy policies and terms of service of the third-party sites and not by this Privacy Policy.</p>
+                <h2>5. Intellectual Property Rights</h2>
+                <p>The Services and their original content, features, and functionality are and will remain the exclusive property of ChromeBird Inc. and its licensors. The Services are protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.</p>
 
-            <h2>Children's Privacy</h2>
-            <p>Our Services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information.</p>
+                <h2>6. Privacy Policy</h2>
+                <p>Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Services, to understand our practices.</p>
 
-            <h2>Changes to Our Privacy Policy</h2>
-            <p>It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users' personal information, especially regarding our core commitments, we will notify you through a notice on the Website home page or by email to the primary email address specified in your account. The date the privacy policy was last revised is identified at the top of the page.</p>
+                <h2>7. Service Availability</h2>
+                <p>We strive to provide reliable service, but we cannot guarantee that the Services will be available at all times. The Services may be temporarily unavailable due to maintenance, updates, or other factors beyond our control.</p>
 
-                <h2>Contact Information</h2>
-                <p>To ask questions or comment about this privacy policy and our privacy practices, please contact us at: <a href="mailto:privacy@chbird.ai">privacy@chbird.ai</a></p>
+                <h2>8. Limitation of Liability</h2>
+                <p>In no event shall ChromeBird Inc., nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Services.</p>
+
+                <h2>9. Termination</h2>
+                <p>We may terminate or suspend your account and bar access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+
+                <h2>10. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p>
+
+                <h2>11. Contact Information</h2>
+                <p>If you have any questions about these Terms of Service, please contact us at: <a href="mailto:legal@chbird.ai" class="emphasis">legal@chbird.ai</a></p>
             </div>
         </div>
     </main>
@@ -602,7 +635,6 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-
       AOS.init({
         duration: 800, // values from 0 to 3000, with step 50ms
         once: true, // whether animation should happen only once - while scrolling down
