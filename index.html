@@ -321,7 +321,7 @@
         }
 
         .hero-text {
-            max-width: 650px; 
+            max-width: 1100px; 
         }
         
         .hero-image-wrapper { 
@@ -352,6 +352,40 @@
         }
 
 
+        /* Rotating role glass effect */
+        #rotating-roles {
+            display: inline-block;
+            width: clamp(380px, 40vw, 600px);
+            text-align: left;
+            padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: middle;
+            line-height: 1.2;
+        }
+        
+        #rotating-roles::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        #rotating-roles:hover::before {
+            left: 100%;
+        }
+
         /* Headings Typography */
         h1, h2, h3 {
             font-family: var(--brand-font); 
@@ -365,12 +399,13 @@
             margin-bottom: 20px;
         }
         #hero h1 { 
-            font-size: 55px;
+            font-size: clamp(24px, 4.5vw, 55px);
             color: var(--hero-text-color); /* MODIFIED */
             /* Modern subtle shadow instead of glow */
             text-shadow: 
                 0 2px 4px rgba(0, 0, 0, 0.1),
                 0 4px 8px rgba(0, 0, 0, 0.05);
+            white-space: nowrap;
         }
          #hero p.lead {
             color: var(--hero-text-color);  /* MODIFIED */
@@ -854,8 +889,13 @@
         }
 
         @media (max-width: 768px) {
-            h1, #hero h1 { 
-                font-size: 36px;
+            #hero h1 { 
+                font-size: clamp(20px, 5vw, 32px);
+                white-space: nowrap;
+            }
+            #rotating-roles {
+                width: clamp(120px, 25vw, 180px);
+                font-size: clamp(12px, 2.5vw, 16px);
             }
             h2, #cta h2 { font-size: 28px; } /* #cta h2 might not exist if only link is used */
             p, p.lead { font-size: 16px; }
@@ -932,6 +972,14 @@
             #cta .container > a {
                 font-size: 20px;
             }
+            #hero h1 {
+                font-size: clamp(16px, 6vw, 24px);
+            }
+            #rotating-roles {
+                width: clamp(100px, 30vw, 160px);
+                font-size: clamp(10px, 3vw, 14px);
+                padding: 4px 8px;
+            }
         }
     </style>
 </head>
@@ -961,8 +1009,8 @@
         <section id="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 data-aos="fade-down" data-aos-duration="800">Deep Visibility into your Complex Codebase</h1>
-                    <p class="lead" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">Measure implementation & effort for your projects</p>
+                    <h1 data-aos="fade-down" data-aos-duration="800">AI for PMs/CTOs/<span id="rotating-roles">Tech Leads</span></h1>
+                    <p class="lead" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">measures progress, estimate efforts, explain your system</p>
                     <div class="hero-cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                         <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" class="btn btn-large">Get Early Access</a>
                     </div>
@@ -1184,6 +1232,19 @@
       window.addEventListener('scroll', handleScroll);
       window.addEventListener('load', animateDashboard);
       window.addEventListener('resize', animateDashboard);
+      
+      // Role rotation functionality
+      const rotatingRoles = document.getElementById('rotating-roles');
+      const roles = ['Tech Leads', 'Compliance Officers', 'Engineering VPs', 'Engineers'];
+      let currentRoleIndex = 0;
+      
+      function rotateRole() {
+        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+        rotatingRoles.textContent = roles[currentRoleIndex];
+      }
+      
+      // Start rotation after page load
+      setInterval(rotateRole, 400);
     </script>
 </body>
 </html>
