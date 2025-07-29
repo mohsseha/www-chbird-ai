@@ -384,6 +384,20 @@
             object-position: center;
         }
 
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .youtube-video {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
 
         /* Typewriter effect for rotating roles */
         #rotating-roles {
@@ -442,6 +456,24 @@
             opacity: 0.85; /* Slightly less prominent than h1 */
             /* Modern subtle shadow */
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Interactive Headline Styles */
+        .interactive-headline {
+            cursor: pointer;
+            transition: color 0.3s ease, text-shadow 0.3s ease, opacity 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .interactive-headline:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .interactive-headline.active {
+            opacity: 1;
+            color: var(--primary);
+            text-shadow: 0 2px 8px rgba(90, 176, 255, 0.5); /* Glow effect for active */
         }
 
 
@@ -1109,6 +1141,56 @@
                 font-size: 14px;
             }
         }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s linear;
+        }
+        .lightbox.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+        .lightbox-content {
+            position: relative;
+            width: 90%;
+            max-width: 960px;
+        }
+        .lightbox-content .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            background-color: #000;
+        }
+        .lightbox-content iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            font-size: 36px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+        }
     </style>
     <!-- === Google/Search Console helpers === -->
 
@@ -1200,7 +1282,7 @@
     <section id="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 data-aos="fade-down" data-aos-duration="800">Objectively measure, estimate & explain software</h1>
+                <h1 data-aos="fade-down" data-aos-duration="800">Objectively <span class="interactive-headline active" data-video="measure">measure</span>, <span class="interactive-headline" data-video="estimate">estimate</span> &amp; <span class="interactive-headline" data-video="explain">explain</span> software</h1>
                 <p class="lead" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">AI tool for
                     PMs/CTOs/<span id="rotating-roles">Tech Leads</span></p>
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
@@ -1209,7 +1291,15 @@
             </div>
             <div class="hero-image-wrapper" data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="1000"
                  id="dashboard-image">
-                <wistia-player media-id="ej48csuf08" aspect="1.8250950570342206"></wistia-player>
+                <div class="video-container" id="video-measure" style="display: block;">
+                    <iframe class="youtube-video" data-video-id="HUXwgbIN-0Y" data-src="https://www.youtube.com/embed/HUXwgbIN-0Y?autoplay=1&mute=1&loop=1&controls=0&playlist=HUXwgbIN-0Y&start=10" src="https://www.youtube.com/embed/HUXwgbIN-0Y?autoplay=1&mute=1&loop=1&controls=0&playlist=HUXwgbIN-0Y&start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container" id="video-estimate" style="display: none;">
+                    <iframe class="youtube-video" data-video-id="-mZl3jcD8Ec" data-src="https://www.youtube.com/embed/-mZl3jcD8Ec?autoplay=1&mute=1&loop=1&controls=0&playlist=-mZl3jcD8Ec&start=10" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container" id="video-explain" style="display: none;">
+                    <iframe class="youtube-video" data-video-id="DzqAry1UWBY" data-src="https://www.youtube.com/embed/DzqAry1UWBY?autoplay=1&mute=1&loop=1&controls=0&playlist=DzqAry1UWBY&start=10" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -1412,6 +1502,73 @@
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    // Interactive Headline Video Switcher
+    document.addEventListener('DOMContentLoaded', () => {
+        const headlines = document.querySelectorAll('.interactive-headline');
+        const videoContainers = {
+            measure: document.getElementById('video-measure'),
+            estimate: document.getElementById('video-estimate'),
+            explain: document.getElementById('video-explain')
+        };
+        const heroImageWrapper = document.getElementById('dashboard-image');
+        const lightbox = document.getElementById('video-lightbox');
+        const lightboxIframe = document.getElementById('lightbox-iframe');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxOverlay = document.querySelector('.lightbox-overlay');
+
+        let activeVideoId = 'HUXwgbIN-0Y'; // Default video ID
+
+        headlines.forEach(headline => {
+            headline.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent click from bubbling up to the video wrapper
+                const videoToShow = headline.getAttribute('data-video');
+
+                // Pause all videos first by clearing their src
+                for (const key in videoContainers) {
+                    const container = videoContainers[key];
+                    if (container) {
+                        const iframe = container.querySelector('.youtube-video');
+                        if (iframe) {
+                            iframe.src = '';
+                        }
+                        container.style.display = 'none';
+                    }
+                }
+                
+                // Update active classes on the headline
+                headlines.forEach(h => h.classList.remove('active'));
+                headline.classList.add('active');
+
+                // Show and play the selected video
+                const newContainer = videoContainers[videoToShow];
+                if (newContainer) {
+                    newContainer.style.display = 'block';
+                    const iframe = newContainer.querySelector('.youtube-video');
+                    if (iframe && iframe.dataset.src) {
+                        iframe.src = iframe.dataset.src;
+                        activeVideoId = iframe.dataset.videoId;
+                    }
+                }
+            });
+        });
+
+        // --- Lightbox Logic ---
+        function openLightbox() {
+            const videoUrl = `https://www.youtube.com/embed/${activeVideoId}?autoplay=1&controls=1`;
+            lightboxIframe.src = videoUrl;
+            lightbox.classList.add('visible');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('visible');
+            lightboxIframe.src = ''; // Stop video from playing in the background
+        }
+
+        heroImageWrapper.addEventListener('click', openLightbox);
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', closeLightbox);
+    });
+
     AOS.init({
         duration: 800, // values from 0 to 3000, with step 50ms
         once: true, // whether animation should happen only once - while scrolling down
@@ -1498,5 +1655,16 @@
     // Start typewriter effect after page load
     setTimeout(typeWriter, 1000);
 </script>
+
+<div id="video-lightbox" class="lightbox" style="display: none;">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+        <button class="lightbox-close">&times;</button>
+        <div class="video-wrapper">
+            <iframe id="lightbox-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
