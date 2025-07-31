@@ -748,6 +748,15 @@
             font-family: var(--font-body);
         }
 
+        .benefit-metric {
+            font-size: 48px;
+            font-weight: 900;
+            font-family: var(--brand-font);
+            color: var(--primary);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
         /* CTA Section (Newsletter) */
         #cta {
             background-color: var(--primary);
@@ -1285,6 +1294,35 @@
         </div>
     </section>
 
+    <section id="benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Stop Guessing. Start Knowing.</h2>
+                <p>Agile development, now powered by objective AI.</p>
+            </div>
+            <div class="benefits">
+                <div class="benefit" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="benefit-metric">5x</div>
+                    <div class="benefit-text">
+                        <h3>Faster Progress Tracking</h3>
+                    </div>
+                </div>
+                <div class="benefit" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="benefit-metric">3x</div>
+                    <div class="benefit-text">
+                        <h3>More Accurate Effort Estimates</h3>
+                    </div>
+                </div>
+                <div class="benefit" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="benefit-metric">$4K</div>
+                    <div class="benefit-text">
+                        <h3>Saved per 10-Eng Team/Month</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="ai-experts" class="section-alt"> <!-- "About Us" links here -->
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -1296,6 +1334,33 @@
                 <img src="darpa.png" alt="DARPA Logo" data-aos="zoom-in" data-aos-delay="300">
                 <img src="irobot.png" alt="iRobot Logo" data-aos="zoom-in" data-aos-delay="400">
             </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>3 Simple Steps</h2>
+            </div>
+            <div class="steps">
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <h3>Connect</h3>
+                    <p>Securely link your code repositories (GitHub, GitLab, Bitbucket, etc.) in minutes.</p>
+                </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <h3>Analyze</h3>
+                    <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns.</p>
+                </div>
+                <div class="step" data-aos="fade-left" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <h3>Action</h3>
+                    <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and deep
+                        insights.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1338,80 +1403,6 @@
                     </div>
                     <h3>Inaccurate Timelines</h3>
                     <p>Ballpark estimates lead to unpredictable delays and cost overruns.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="how-it-works" class="section-alt">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>3 Simple Steps</h2>
-            </div>
-            <div class="steps">
-                <div class="step" data-aos="fade-right" data-aos-delay="100">
-                    <div class="step-number">1</div>
-                    <h3>Connect</h3>
-                    <p>Securely link your code repositories (GitHub, GitLab, Bitbucket, etc.) in minutes.</p>
-                </div>
-                <div class="step" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-number">2</div>
-                    <h3>Analyze</h3>
-                    <p>ChromeBird's AI engine continuously analyzes code structure, changes, and activity patterns.</p>
-                </div>
-                <div class="step" data-aos="fade-left" data-aos-delay="300">
-                    <div class="step-number">3</div>
-                    <h3>Action</h3>
-                    <p>Access intuitive dashboards and reports showing real progress, realistic estimates, and deep
-                        insights.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="benefits">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Why ChromeBird</h2>
-            </div>
-            <!-- TODO: add the 3 ROI metrics -->
-            <div class="benefits">
-                <div class="benefit" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <div class="benefit-text">
-                        <h3>Unprecedented Transparency</h3>
-                        <p>See exactly where development stands and how features are progressing in real-time.</p>
-                    </div>
-                </div>
-                <div class="benefit" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <div class="benefit-text">
-                        <h3>Realistic Estimations</h3>
-                        <p>Get AI-powered projections for future work based on actual code complexity and history.</p>
-                    </div>
-                </div>
-                <div class="benefit" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                        </svg>
-                    </div>
-                    <div class="benefit-text">
-                        <h3>Bridge Business & Tech</h3>
-                        <p>Foster alignment and shared understanding by giving everyone a common, objective view.</p>
-                    </div>
                 </div>
             </div>
         </div>
