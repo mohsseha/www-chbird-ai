@@ -180,8 +180,8 @@
         .btn-login {
             display: inline-block;
             padding: 8px 16px;
-            background-color: white;
-            color: var(--primary) !important;
+            background-color: var(--primary);
+            color: white !important;
             border: 2px solid var(--primary);
             border-radius: 6px;
             font-weight: 600; 
@@ -194,10 +194,40 @@
         }
 
         .btn-login:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Try It For Free button styles */
+        .btn-try-free {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: white;
+            color: var(--primary) !important;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            font-weight: 600;
+            font-family: var(--font-body);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-try-free:hover {
             background-color: var(--primary);
             color: white !important;
             transform: translateY(-1px);
             box-shadow: var(--shadow-sm);
+        }
+        
+        /* Utility class for padding left */
+        .pl-3 {
+            padding-left: 0.75rem;
         }
 
         /* Get Early Access button styles */
@@ -222,6 +252,34 @@
             border-color: #3a8cffa6;
             transform: translateY(-1px);
             box-shadow: var(--shadow-sm);
+        }
+
+        /* Google Calendar Button Styling for Header */
+        .calendar-button-wrapper {
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .calendar-button-wrapper .google-calendar-appointment-scheduling-button {
+            display: inline-block !important;
+            padding: 8px 16px !important;
+            background-color: var(--primary) !important;
+            color: white !important;
+            border: 2px solid var(--primary) !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            font-family: var(--font-body) !important;
+            transition: all 0.3s ease !important;
+            cursor: pointer !important;
+        }
+        
+        .calendar-button-wrapper .google-calendar-appointment-scheduling-button:hover {
+            background-color: #3a8cffa6 !important;
+            border-color: #3a8cffa6 !important;
+            transform: translateY(-1px) !important;
+            box-shadow: var(--shadow-sm) !important;
         }
 
 
@@ -449,7 +507,7 @@
             .header-buttons {
                 gap: 8px;
             }
-            .btn-login, .btn-early-access {
+            .btn-login, .btn-early-access, .btn-try-free {
                 padding: 6px 12px;
                 font-size: 12px;
             }
@@ -499,7 +557,7 @@
             </nav>
             <div class="header-buttons">
                 <a href="https://app.chbird.ai/" class="btn-login" target="_blank" rel="noopener noreferrer">Login</a>
-                <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" class="btn-early-access" target="_blank" rel="noopener noreferrer">Get Early Access</a>
+                <a href="https://app.chbird.ai/" class="btn-try-free" target="_blank" rel="noopener noreferrer">Try It For Free<span class="pl-3">→</span></a>
             </div>
         </div>
     </header>

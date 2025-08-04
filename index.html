@@ -221,6 +221,38 @@
             padding: 16px 32px;
             font-size: 18px;
         }
+        
+        /* Outline button style for Try It For Free */
+        .btn-outline {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: white;
+            color: var(--primary) !important;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            font-family: var(--font-body);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            min-width: 200px;
+            height: 56px;
+            line-height: 24px;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
 
         /* Header buttons container */
         .header-buttons {
@@ -233,8 +265,8 @@
         .btn-login {
             display: inline-block;
             padding: 8px 16px;
-            background-color: white;
-            color: var(--primary) !important;
+            background-color: var(--primary);
+            color: white !important;
             border: 2px solid var(--primary);
             border-radius: 6px;
             font-weight: 600;
@@ -247,8 +279,8 @@
         }
 
         .btn-login:hover {
-            background-color: var(--primary);
-            color: white !important;
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
             transform: translateY(-1px);
             box-shadow: var(--shadow-sm);
         }
@@ -275,6 +307,120 @@
             border-color: #3a8cffa6;
             transform: translateY(-1px);
             box-shadow: var(--shadow-sm);
+        }
+
+        /* Google Calendar Button Styling */
+        .calendar-button-wrapper {
+            display: inline-block;
+            margin-right: 16px;
+        }
+        
+        /* Target all possible Google Calendar button elements */
+        .calendar-button-wrapper button,
+        .calendar-button-wrapper .google-calendar-appointment-scheduling-button,
+        .calendar-button-wrapper [role="button"],
+        .calendar-button-wrapper a {
+            display: inline-block !important;
+            padding: 16px 32px !important;
+            background-color: var(--primary) !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            font-size: 18px !important;
+            font-family: var(--font-body) !important;
+            transition: all 0.3s ease !important;
+            box-shadow: var(--shadow-sm) !important;
+            cursor: pointer !important;
+            line-height: 1.2 !important;
+            min-height: auto !important;
+            height: auto !important;
+            width: auto !important;
+            min-width: auto !important;
+        }
+        
+        .calendar-button-wrapper button:hover,
+        .calendar-button-wrapper .google-calendar-appointment-scheduling-button:hover,
+        .calendar-button-wrapper [role="button"]:hover,
+        .calendar-button-wrapper a:hover {
+            background-color: var(--primary-dark) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-md) !important;
+        }
+        
+        /* Force override any Google styles */
+        .calendar-button-wrapper * {
+            font-family: var(--font-body) !important;
+        }
+        
+        /* Google Calendar button custom styling */
+        .hero-cta .google-calendar-appointment-scheduling-button {
+            display: inline-block !important;
+            padding: 16px 32px !important;
+            background: linear-gradient(80deg, #FBCB0A, #efc729) !important;
+            color: #333 !important;
+            border: none !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            font-size: 18px !important;
+            font-family: var(--font-body) !important;
+            transition: all 0.3s ease !important;
+            box-shadow: var(--shadow-sm) !important;
+            cursor: pointer !important;
+            text-align: center !important;
+            min-width: 200px !important;
+        }
+        
+        .hero-cta .google-calendar-appointment-scheduling-button:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-md) !important;
+            background: linear-gradient(80deg, #efc729, #FBCB0A) !important;
+        }
+        
+        /* Book a Demo button with gradient background */
+        .btn-demo {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(80deg, #FBCB0A, #efc729);
+            color: #333 !important; /* Dark text for contrast on yellow */
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            font-family: var(--font-body);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .btn-demo:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(80deg, #efc729, #FBCB0A);
+        }
+        
+        /* Make buttons same width in hero section */
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-cta .btn-large,
+        .hero-cta .btn-demo,
+        .hero-cta .btn-outline {
+            min-width: 200px;
+        }
+        
+        /* Utility class for padding left */
+        .pl-3 {
+            padding-left: 0.75rem;
         }
 
         /* Sections */
@@ -1022,6 +1168,11 @@
                 padding: 12px 24px;
                 font-size: 16px;
             }
+            
+            .calendar-button-wrapper .google-calendar-appointment-scheduling-button {
+                padding: 12px 24px !important;
+                font-size: 16px !important;
+            }
 
             h2, #cta h2 {
                 font-size: 28px;
@@ -1137,6 +1288,30 @@
             .btn-large {
                 padding: 10px 20px;
                 font-size: 14px;
+            }
+            
+            .calendar-button-wrapper {
+                margin-right: 12px;
+                margin-bottom: 12px;
+            }
+            
+            .calendar-button-wrapper .google-calendar-appointment-scheduling-button {
+                padding: 10px 20px !important;
+                font-size: 14px !important;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .hero-cta .btn-large,
+            .hero-cta .btn-demo,
+            .hero-cta .btn-outline {
+                min-width: 180px;
+                width: 100%;
+                max-width: 280px;
             }
         }
 
@@ -1276,7 +1451,58 @@
                 <p class="lead" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">AI tool for
                     PMs/CTOs/<span id="rotating-roles">Tech Leads</span></p>
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
-                    <a href="https://forms.gle/Fhhpzs9PXCU85YeB9" class="btn btn-large">Get Early Access</a>
+                    <!-- Google Calendar Appointment Scheduling begin -->
+                    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                    <script>
+                    (function() {
+                      var target = document.currentScript;
+                      window.addEventListener('load', function() {
+                        calendar.schedulingButton.load({
+                          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2oOA7Ag2AJ0-twifGu4xBqp4P_mD5JSJRRINrmUZrUQbqzt0gM-5N-WUq2QKPQLZIxK__nFD8m?gv=true',
+                          color: '#039BE5',
+                          label: "Book a Demo",
+                          target,
+                        });
+                      });
+                    })();
+                    </script>
+                    <style>
+                    /* Force Google Calendar button styling */
+                    .hero-cta button,
+                    .hero-cta [role="button"],
+                    .hero-cta a[role="button"] {
+                        display: inline-block !important;
+                        padding: 16px 32px !important;
+                        background: linear-gradient(80deg, #FBCB0A, #efc729) !important;
+                        color: #333 !important;
+                        border: none !important;
+                        border-radius: 6px !important;
+                        text-decoration: none !important;
+                        font-weight: 600 !important;
+                        font-size: 18px !important;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+                        transition: all 0.3s ease !important;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+                        cursor: pointer !important;
+                        min-width: 200px !important;
+                        height: 56px !important;
+                        line-height: 24px !important;
+                        box-sizing: border-box !important;
+                        margin-right: 12px !important;
+                        vertical-align: middle !important;
+                    }
+                    
+                    .hero-cta button:hover,
+                    .hero-cta [role="button"]:hover,
+                    .hero-cta a[role="button"]:hover {
+                        transform: translateY(-2px) !important;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+                        background: linear-gradient(80deg, #efc729, #FBCB0A) !important;
+                    }
+                    </style>
+                    <!-- end Google Calendar Appointment Scheduling -->
+                    <a href="https://app.chbird.ai/" class="btn-outline" target="_blank" rel="noopener noreferrer">Try It For Free<span class="pl-3">→</span></a>
                 </div>
             </div>
             <div class="hero-image-wrapper" data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="1000"
