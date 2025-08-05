@@ -221,7 +221,7 @@
             padding: 16px 32px;
             font-size: 18px;
         }
-        
+
         /* Outline button style for Try It For Free */
         .btn-outline {
             display: inline-block;
@@ -246,7 +246,7 @@
             justify-content: center;
             box-shadow: var(--shadow-sm);
         }
-        
+
         .btn-outline:hover {
             background-color: var(--primary);
             color: white !important;
@@ -314,7 +314,7 @@
             display: inline-block;
             margin-right: 16px;
         }
-        
+
         /* Target all possible Google Calendar button elements */
         .calendar-button-wrapper button,
         .calendar-button-wrapper .google-calendar-appointment-scheduling-button,
@@ -339,7 +339,7 @@
             width: auto !important;
             min-width: auto !important;
         }
-        
+
         .calendar-button-wrapper button:hover,
         .calendar-button-wrapper .google-calendar-appointment-scheduling-button:hover,
         .calendar-button-wrapper [role="button"]:hover,
@@ -348,12 +348,12 @@
             transform: translateY(-2px) !important;
             box-shadow: var(--shadow-md) !important;
         }
-        
+
         /* Force override any Google styles */
         .calendar-button-wrapper * {
             font-family: var(--font-body) !important;
         }
-        
+
         /* Google Calendar button custom styling */
         .hero-cta .google-calendar-appointment-scheduling-button {
             display: inline-block !important;
@@ -372,13 +372,13 @@
             text-align: center !important;
             min-width: 200px !important;
         }
-        
+
         .hero-cta .google-calendar-appointment-scheduling-button:hover {
             transform: translateY(-2px) !important;
             box-shadow: var(--shadow-md) !important;
             background: linear-gradient(80deg, #efc729, #FBCB0A) !important;
         }
-        
+
         /* Book a Demo button with gradient background */
         .btn-demo {
             display: inline-block;
@@ -397,13 +397,13 @@
             text-align: center;
             min-width: 200px;
         }
-        
+
         .btn-demo:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
             background: linear-gradient(80deg, #efc729, #FBCB0A);
         }
-        
+
         /* Make buttons same width in hero section */
         .hero-cta {
             display: flex;
@@ -411,13 +411,13 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .hero-cta .btn-large,
         .hero-cta .btn-demo,
         .hero-cta .btn-outline {
             min-width: 200px;
         }
-        
+
         /* Utility class for padding left */
         .pl-3 {
             padding-left: 0.75rem;
@@ -1168,7 +1168,7 @@
                 padding: 12px 24px;
                 font-size: 16px;
             }
-            
+
             .calendar-button-wrapper .google-calendar-appointment-scheduling-button {
                 padding: 12px 24px !important;
                 font-size: 16px !important;
@@ -1289,23 +1289,23 @@
                 padding: 10px 20px;
                 font-size: 14px;
             }
-            
+
             .calendar-button-wrapper {
                 margin-right: 12px;
                 margin-bottom: 12px;
             }
-            
+
             .calendar-button-wrapper .google-calendar-appointment-scheduling-button {
                 padding: 10px 20px !important;
                 font-size: 14px !important;
             }
-            
+
             .hero-cta {
                 flex-direction: column;
                 align-items: center;
                 gap: 12px;
             }
-            
+
             .hero-cta .btn-large,
             .hero-cta .btn-demo,
             .hero-cta .btn-outline {
@@ -1331,21 +1331,25 @@
             opacity: 0;
             transition: visibility 0s, opacity 0.3s linear;
         }
+
         .lightbox.visible {
             visibility: visible;
             opacity: 1;
         }
+
         .lightbox-content {
             position: relative;
             width: 90%;
             max-width: 960px;
         }
+
         .lightbox-content .video-wrapper {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             background-color: #000;
         }
+
         .lightbox-content iframe {
             position: absolute;
             top: 0;
@@ -1353,6 +1357,7 @@
             width: 100%;
             height: 100%;
         }
+
         .lightbox-close {
             position: absolute;
             top: -40px;
@@ -1409,16 +1414,20 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17421761328"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'AW-17421761328');
-      gtag('config', 'G-CMEG0VMDR3');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17421761328');
+        gtag('config', 'G-CMEG0VMDR3');
     </script>
     <!-- Event snippet for Page view conversion page -->
     <script>
-      gtag('event', 'conversion', {'send_to': 'AW-17421761328/8_jNCODX5PwaELD2q_NA'});
+        gtag('event', 'conversion', {'send_to': 'AW-17421761328/8_jNCODX5PwaELD2q_NA'});
     </script>
 </head>
 <body>
@@ -1447,7 +1456,10 @@
     <section id="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 data-aos="fade-down" data-aos-duration="800">Objectively <span class="interactive-headline active" data-video="measure">measure</span>, <span class="interactive-headline" data-video="estimate">estimate</span> &amp; <span class="interactive-headline" data-video="explain">explain</span> software</h1>
+                <h1 data-aos="fade-down" data-aos-duration="800">Objectively <span class="interactive-headline active"
+                                                                                   data-video="measure">measure</span>,
+                    <span class="interactive-headline" data-video="estimate">estimate</span> &amp; <span
+                            class="interactive-headline" data-video="explain">explain</span> software</h1>
                 <p class="lead" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">AI tool for
                     PMs/CTOs/<span id="rotating-roles">Tech Leads</span></p>
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
@@ -1455,66 +1467,95 @@
                     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
                     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
                     <script>
-                    (function() {
-                      var target = document.currentScript;
-                      window.addEventListener('load', function() {
-                        calendar.schedulingButton.load({
-                          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ixSF3hBMFxoW7cdyYqjg6ibUOimIG7PlP4S1uYnpcTnGQmfS11Df78M0bO14ImrU-B6R9seUT?gv=true',
-                          color: '#039BE5',
-                          label: "Book a Demo",
-                          target,
-                        });
-                      });
-                    })();
+                        (function () {
+                            var target = document.currentScript;
+                            window.addEventListener('load', function () {
+                                calendar.schedulingButton.load({
+                                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ixSF3hBMFxoW7cdyYqjg6ibUOimIG7PlP4S1uYnpcTnGQmfS11Df78M0bO14ImrU-B6R9seUT?gv=true',
+                                    color: '#039BE5',
+                                    label: "Book a Demo",
+                                    target,
+                                });
+                            });
+                        })();
                     </script>
+                    <script>
+                        document.addEventListener(
+                            "mousedown",
+                            function (e) {
+                                if (
+                                    e.target.closest("button") &&
+                                    e.target.innerText.includes("Book a Demo")
+                                ) {
+                                    gtag('event', 'book_a_demo');
+                                }
+                            },
+                            true,
+                        )
+                    </script>
+
                     <style>
-                    /* Force Google Calendar button styling */
-                    .hero-cta button,
-                    .hero-cta [role="button"],
-                    .hero-cta a[role="button"] {
-                        display: inline-block !important;
-                        padding: 16px 32px !important;
-                        background: linear-gradient(80deg, #FBCB0A, #efc729) !important;
-                        color: #333 !important;
-                        border: none !important;
-                        border-radius: 6px !important;
-                        text-decoration: none !important;
-                        font-weight: 600 !important;
-                        font-size: 18px !important;
-                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-                        transition: all 0.3s ease !important;
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-                        cursor: pointer !important;
-                        min-width: 200px !important;
-                        height: 56px !important;
-                        line-height: 24px !important;
-                        box-sizing: border-box !important;
-                        margin-right: 12px !important;
-                        vertical-align: middle !important;
-                    }
-                    
-                    .hero-cta button:hover,
-                    .hero-cta [role="button"]:hover,
-                    .hero-cta a[role="button"]:hover {
-                        transform: translateY(-2px) !important;
-                        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-                        background: linear-gradient(80deg, #efc729, #FBCB0A) !important;
-                    }
+                        /* Force Google Calendar button styling */
+                        .hero-cta button,
+                        .hero-cta [role="button"],
+                        .hero-cta a[role="button"] {
+                            display: inline-block !important;
+                            padding: 16px 32px !important;
+                            background: linear-gradient(80deg, #FBCB0A, #efc729) !important;
+                            color: #333 !important;
+                            border: none !important;
+                            border-radius: 6px !important;
+                            text-decoration: none !important;
+                            font-weight: 600 !important;
+                            font-size: 18px !important;
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+                            transition: all 0.3s ease !important;
+                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+                            cursor: pointer !important;
+                            min-width: 200px !important;
+                            height: 56px !important;
+                            line-height: 24px !important;
+                            box-sizing: border-box !important;
+                            margin-right: 12px !important;
+                            vertical-align: middle !important;
+                        }
+
+                        .hero-cta button:hover,
+                        .hero-cta [role="button"]:hover,
+                        .hero-cta a[role="button"]:hover {
+                            transform: translateY(-2px) !important;
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+                            background: linear-gradient(80deg, #efc729, #FBCB0A) !important;
+                        }
                     </style>
                     <!-- end Google Calendar Appointment Scheduling -->
-                    <a href="https://app.chbird.ai/" class="btn-outline" target="_blank" rel="noopener noreferrer">Try It For Free<span class="pl-3">→</span></a>
+                    <a href="https://app.chbird.ai/" class="btn-outline" target="_blank" rel="noopener noreferrer">Try
+                        It For Free<span class="pl-3">→</span></a>
                 </div>
             </div>
             <div class="hero-image-wrapper" data-aos="zoom-in-up" data-aos-delay="0" data-aos-duration="1000"
                  id="dashboard-image">
                 <div class="video-container" id="video-measure" style="display: block;">
-                    <iframe class="youtube-video" data-video-id="HUXwgbIN-0Y" data-src="https://www.youtube.com/embed/HUXwgbIN-0Y?autoplay=1&mute=1&loop=1&controls=0&playlist=HUXwgbIN-0Y&start=10" src="https://www.youtube.com/embed/HUXwgbIN-0Y?autoplay=1&mute=1&loop=1&controls=0&playlist=HUXwgbIN-0Y&start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-video" data-video-id="HUXwgbIN-0Y"
+                            data-src="https://www.youtube.com/embed/HUXwgbIN-0Y?autoplay=1&mute=1&loop=1&controls=0&playlist=HUXwgbIN-0Y&start=10"
+                            src="https://www.youtube.com/embed/HUXwgbIN-0Y?autoplay=1&mute=1&loop=1&controls=0&playlist=HUXwgbIN-0Y&start=10"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
                 <div class="video-container" id="video-estimate" style="display: none;">
-                    <iframe class="youtube-video" data-video-id="-mZl3jcD8Ec" data-src="https://www.youtube.com/embed/-mZl3jcD8Ec?autoplay=1&mute=1&loop=1&controls=0&playlist=-mZl3jcD8Ec&start=10" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-video" data-video-id="-mZl3jcD8Ec"
+                            data-src="https://www.youtube.com/embed/-mZl3jcD8Ec?autoplay=1&mute=1&loop=1&controls=0&playlist=-mZl3jcD8Ec&start=10"
+                            src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
                 <div class="video-container" id="video-explain" style="display: none;">
-                    <iframe class="youtube-video" data-video-id="DzqAry1UWBY" data-src="https://www.youtube.com/embed/DzqAry1UWBY?autoplay=1&mute=1&loop=1&controls=0&playlist=DzqAry1UWBY&start=10" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-video" data-video-id="DzqAry1UWBY"
+                            data-src="https://www.youtube.com/embed/DzqAry1UWBY?autoplay=1&mute=1&loop=1&controls=0&playlist=DzqAry1UWBY&start=10"
+                            src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -1732,7 +1773,7 @@
                         container.style.display = 'none';
                     }
                 }
-                
+
                 // Update active classes on the headline
                 headlines.forEach(h => h.classList.remove('active'));
                 headline.classList.add('active');
@@ -1859,7 +1900,9 @@
     <div class="lightbox-content">
         <button class="lightbox-close">&times;</button>
         <div class="video-wrapper">
-            <iframe id="lightbox-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="lightbox-iframe" width="560" height="315" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
         </div>
     </div>
 </div>
