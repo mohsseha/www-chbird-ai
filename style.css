@@ -281,6 +281,27 @@ nav a:hover {
     max-width: 90%;
 }
 
+.card-footer {
+    margin-top: auto; /* Pushes footer to bottom */
+    padding-top: var(--spacing-sm);
+}
+
+.linkedin-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--secondary-slate);
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.linkedin-link:hover {
+    color: var(--primary-navy);
+    border-bottom-color: var(--primary-navy);
+}
+
 .arrow {
     margin-top: var(--spacing-md);
     font-size: 1.25rem;
