@@ -1,3 +1,6 @@
+---
+active_page: team
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,23 +27,7 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="ChBird_logo.png" alt="ChromeBird AI Labs Logo">
-                <span>ChromeBird AI Labs</span>
-            </a>
-            <nav>
-                <ul style="display: flex; align-items: center; gap: var(--spacing-md);">
-                    <li><a href="index.html#products">Products</a></li>
-                    <li><a href="index.html#insights">Insights</a></li>
-                    <li><a href="team.html" class="active">Team</a></li>
-                    <li style="margin-left: var(--spacing-md);"><a href="https://app.chbird.ai/login" class="btn-nav">Login</a></li>
-                    <li><a href="#" class="btn-nav btn-nav-primary">Join Insights</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    {% include header.html %}
 
     <main>
         <section class="hero">

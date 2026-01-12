@@ -122,6 +122,86 @@ nav ul {
     display: flex;
     gap: var(--spacing-md);
     list-style: none;
+    align-items: center; /* Ensure alignment */
+}
+
+/* Dropdown Styles */
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-parent > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.chevron {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid var(--secondary-slate);
+    transition: transform 0.2s ease;
+    margin-top: 2px;
+}
+
+.dropdown-parent:hover .chevron {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(3, 24, 41, 0.08);
+    padding: 0.5rem 0;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Override nav ul gap */
+    z-index: 1000;
+}
+
+/* Connect the hover area so menu doesn't disappear */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.dropdown-parent:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--secondary-slate);
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bg-paper);
+    color: var(--primary-navy);
 }
 
 nav a {
@@ -314,6 +394,37 @@ nav a:hover {
 .card:hover .arrow {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Highlight Card for Collections/Actions */
+.card-highlight {
+    background-color: var(--primary-navy);
+    border-color: var(--primary-navy);
+    color: white;
+}
+
+.card-highlight .card-tag {
+    color: var(--accent-yellow);
+}
+
+.card-highlight h3 {
+    color: white;
+}
+
+.card-highlight p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-highlight .arrow {
+    color: var(--accent-yellow);
+    opacity: 1; /* Always visible on the highlight card */
+    transform: translateX(0);
+}
+
+.card-highlight:hover {
+    background-color: #052a4a;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(3, 24, 41, 0.25);
 }
 
 /* Collaborate Section */

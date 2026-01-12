@@ -1,0 +1,33 @@
+<header>
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="ChBird_logo.png" alt="ChromeBird AI Labs Logo">
+            <span>ChromeBird AI Labs</span>
+        </a>
+        <nav>
+            <ul style="display: flex; align-items: center; gap: var(--spacing-md);">
+                <li class="dropdown-parent">
+                    <a href="{% if page.is_home %}#products{% else %}index.html#products{% endif %}">
+                        Products <span class="chevron"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="PM.html">ChBird PM</a></li>
+                        <li><a href="compliance.html">ChBird Compliance</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% if page.is_home %}#insights{% else %}index.html#insights{% endif %}">Insights</a>
+                </li>
+                <li>
+                    <a href="team.html" {% if page.active_page == 'team' %}class="active"{% endif %}>Team</a>
+                </li>
+                <li style="margin-left: var(--spacing-md);">
+                    <a href="https://app.chbird.ai/login" class="btn-nav">Login</a>
+                </li>
+                <li>
+                    <a href="#" class="btn-nav btn-nav-primary">Join Insights</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

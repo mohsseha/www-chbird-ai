@@ -1,3 +1,6 @@
+---
+is_home: true
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,23 +27,7 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="ChBird_logo.png" alt="ChromeBird AI Labs Logo">
-                <span>ChromeBird AI Labs</span>
-            </a>
-            <nav>
-                <ul style="display: flex; align-items: center; gap: var(--spacing-md);">
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#insights">Insights</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li style="margin-left: var(--spacing-md);"><a href="https://app.chbird.ai/login" class="btn-nav">Login</a></li>
-                    <li><a href="#" class="btn-nav btn-nav-primary">Join Insights</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    {% include header.html %}
 
     <main>
         <section class="hero">
@@ -52,6 +39,7 @@
         <section id="products" class="content-block">
             <div class="container">
                 <h2 class="section-title">Products</h2>
+                <p style="text-align: center; color: var(--secondary-slate); margin-top: -1.5rem; margin-bottom: 3rem; font-style: italic;">Built using our Deep Code Indexing technology</p>
                 <div class="card-grid">
                     <a href="PM.html" class="card">
                         <span class="card-tag">Management</span>
@@ -66,7 +54,6 @@
                         <span class="arrow">→</span>
                     </a>
                 </div>
-                <p style="margin-top: 2rem; text-align: center; color: var(--secondary-slate); font-style: italic; font-size: 0.9rem;">Built using our Deep Code Indexing technology</p>
             </div>
         </section>
 
@@ -91,10 +78,10 @@
                         <h3>Bespoke AI Solutions</h3>
                         <p>Bespoke AI solutions in Robotics Sensing space.</p>
                     </div>
-                    <a href="http://chbird.ai/blog" class="card">
-                        <span class="card-tag">Insights</span>
-                        <h3>Our Blog</h3>
-                        <p>Thoughts on the future of software evolution.</p>
+                    <a href="http://chbird.ai/blog" class="card card-highlight">
+                        <span class="card-tag">Archive</span>
+                        <h3>Read the Blog</h3>
+                        <p>Explore our full collection of thoughts on the future of software evolution.</p>
                         <span class="arrow">→</span>
                     </a>
                 </div>
