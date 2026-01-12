@@ -15,4 +15,8 @@
 - **Tracking & Analytics:**
   - We use Google Ads (AdWords) and Google Analytics to keep track of pages.
   - Most pages should include the relevant tracking and analytics scripts/tags.
-  - All pages should have links to support tracking and navigation.
+  - Most pages should have links to support tracking and navigation.
+- **Technology:**
+  - The site uses **Jekyll** for component management (e.g., `_includes/header.html`).
+  - When editing pages, ensure they contain Jekyll Front Matter (the `---` block at the top) so they are processed correctly.
+  - To test changes locally, use `jekyll serve` (see `README.md` for Docker instructions).
