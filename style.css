@@ -433,7 +433,7 @@ nav a.active {
 .collaborate-section {
     padding: var(--spacing-xl) 0;
     text-align: center;
-    background-color: var(--primary-navy); /* Inverted section */
+    background-color: #1C2A36; /* Charcoal Navy - Softer than primary */
     color: white;
 }
 
@@ -540,6 +540,17 @@ footer {
     filter: grayscale(100%) opacity(0.6);
     transition: all 0.4s ease;
     mix-blend-mode: multiply;
+}
+
+/* Specific fix for dark background sections */
+.collaborate-section .partner-logo {
+    filter: brightness(0) invert(1) opacity(0.8);
+    mix-blend-mode: normal;
+}
+
+.collaborate-section .partner-logo:hover {
+    filter: brightness(0) invert(1) opacity(1);
+    transform: scale(1.05);
 }
 
 .partner-logo:hover {
