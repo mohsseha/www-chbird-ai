@@ -7,7 +7,7 @@
         <nav>
             <ul style="display: flex; align-items: center; gap: var(--spacing-md);">
                 <li class="dropdown-parent">
-                    <a href="{% if page.is_home %}#products{% else %}index.html#products{% endif %}">
+                    <a href="{% if page.is_home %}#products{% else %}index.html#products{% endif %}" {% if page.active_page == 'pm' or page.active_page == 'compliance' %}class="active"{% endif %}>
                         Products <span class="chevron"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -16,7 +16,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{% if page.is_home %}#insights{% else %}index.html#insights{% endif %}">Insights</a>
+                    <a href="{% if page.is_home %}#insights{% else %}index.html#insights{% endif %}" {% if page.active_page == 'mcp' %}class="active"{% endif %}>Insights</a>
                 </li>
                 <li>
                     <a href="team.html" {% if page.active_page == 'team' %}class="active"{% endif %}>Team</a>

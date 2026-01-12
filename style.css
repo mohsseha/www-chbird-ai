@@ -210,7 +210,8 @@ nav a {
     transition: color 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: var(--primary-navy);
 }
 
