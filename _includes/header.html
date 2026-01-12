@@ -11,8 +11,8 @@
                         Products <span class="chevron"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="PM.html">ChBird PM</a></li>
-                        <li><a href="compliance.html">ChBird Compliance</a></li>
+                        <li><a href="PM.html" {% if page.active_page == 'pm' %}class="active"{% endif %}>ChBird PM</a></li>
+                        <li><a href="compliance.html" {% if page.active_page == 'compliance' %}class="active"{% endif %}>ChBird Compliance</a></li>
                     </ul>
                 </li>
                 <li>

@@ -199,7 +199,8 @@ nav ul {
     font-size: 0.9rem;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
     background-color: var(--bg-paper);
     color: var(--primary-navy);
 }
