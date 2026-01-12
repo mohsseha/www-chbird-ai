@@ -1,127 +1,85 @@
 ---
+layout: default
 is_home: true
+title: ChromeBird AI Labs
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChromeBird AI Labs</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17421761328"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<section class="hero">
+    <div class="container">
+        <h1 class="display-text">Useful Products.<br>Hard Problems.<br>Real Results.</h1>
+    </div>
+</section>
 
-        gtag('config', 'AW-17421761328');
-        gtag('config', 'G-CMEG0VMDR3');
-    </script>
-    <!-- Event snippet for Page view conversion page -->
-    <script>
-        gtag('event', 'conversion', {'send_to': 'AW-17421761328/8_jNCODX5PwaELD2q_NA'});
-    </script>
-</head>
-<body>
-    {% include header.html %}
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1 class="display-text">Useful Products.<br>Hard Problems.<br>Real Results.</h1>
-            </div>
-        </section>
-
-        <section id="products" class="content-block">
-            <div class="container">
-                <h2 class="section-title">Products</h2>
-                <p style="text-align: center; color: var(--secondary-slate); margin-top: -1.5rem; margin-bottom: 3rem; font-style: italic;">Built using our Deep Code Indexing technology</p>
-                <div class="card-grid">
-                    <a href="PM.html" class="card">
-                        <span class="card-tag">Management</span>
-                        <h3>ChBird PM</h3>
-                        <p>Measure ticket progress and estimates future efforts <em>directly from code</em>.</p>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="compliance.html" class="card">
-                        <span class="card-tag">Security</span>
-                        <h3>ChBird Compliance</h3>
-                        <p>AI to audit and track where you are in your compliance journey?</p>
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="insights" class="content-block alt-bg">
-            <div class="container">
-                <h2 class="section-title">Insights</h2>
-                <div class="card-grid">
-                    <a href="MCP.html" class="card">
-                        <span class="card-tag">API Infrastructure</span>
-                        <h3>CB Deep API MCP</h3>
-                        <p>Wrap your API documentation with Deep MCP -> improve your client success by 2x.</p>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="public/devin.html" class="card">
-                        <span class="card-tag">Benchmarks</span>
-                        <h3>Devin Outperformed</h3>
-                        <p>We outperform Devin on standard software engineering benchmarks.</p>
-                        <span class="arrow">→</span>
-                    </a>
-                    <div class="card">
-                        <span class="card-tag">Robotics</span>
-                        <h3>Bespoke AI Solutions</h3>
-                        <p>Bespoke AI solutions in Robotics Sensing space.</p>
-                    </div>
-                    <a href="http://chbird.ai/blog" class="card card-highlight">
-                        <span class="card-tag">Archive</span>
-                        <h3>Read the Blog</h3>
-                        <p>Explore our full collection of thoughts on the future of software evolution.</p>
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="collaborate-section">
-            <div class="container">
-                <h2>Collaborate</h2>
-                <p style="max-width: 800px; margin: 0 auto 3rem;">
-                    <a href="team.html" style="color: var(--accent-yellow); text-decoration: underline;">Our team</a> specializes in 0-1 challenging AI and ML projects across software and robotics industries.
-                </p>
-
-                <!-- Dignified Logo Carousel -->
-                <div class="logo-carousel">
-                    <!-- Using available assets as placeholders for partners -->
-                    <img src="walmart.png" alt="Walmart" class="partner-logo">
-                    <img src="irobot.png" alt="iRobot" class="partner-logo">
-                    <img src="mit.png" alt="MIT" class="partner-logo">
-                    <img src="darpa.png" alt="DARPA" class="partner-logo">
-                    <!-- Add Line Vision / Vital Spark here when assets available -->
-                </div>
-
-                <div class="research-cta">
-                    <a href="#" class="btn-text">Follow our Research →</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 ChromeBird AI Labs.</p>
-                <div class="socials">
-                    <a href="legal.html" style="margin-left: 20px; color: var(--secondary-slate); font-size: 0.9rem;">Legal</a>
-                </div>
-            </div>
+<section id="products" class="content-block">
+    <div class="container">
+        <h2 class="section-title">Products</h2>
+        <p style="text-align: center; color: var(--secondary-slate); margin-top: -1.5rem; margin-bottom: 3rem; font-style: italic;">Built using our Deep Code Indexing technology</p>
+        <div class="card-grid">
+            <a href="PM.html" class="card">
+                <span class="card-tag">Management</span>
+                <h3>ChBird PM</h3>
+                <p>Measure ticket progress and estimates future efforts <em>directly from code</em>.</p>
+                <span class="arrow">→</span>
+            </a>
+            <a href="compliance.html" class="card">
+                <span class="card-tag">Security</span>
+                <h3>ChBird Compliance</h3>
+                <p>AI to audit and track where you are in your compliance journey?</p>
+                <span class="arrow">→</span>
+            </a>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
+
+<section id="insights" class="content-block alt-bg">
+    <div class="container">
+        <h2 class="section-title">Insights</h2>
+        <div class="card-grid">
+            <a href="MCP.html" class="card">
+                <span class="card-tag">API Infrastructure</span>
+                <h3>CB Deep API MCP</h3>
+                <p>Wrap your API documentation with Deep MCP -> improve your client success by 2x.</p>
+                <span class="arrow">→</span>
+            </a>
+            <a href="public/devin.html" class="card">
+                <span class="card-tag">Benchmarks</span>
+                <h3>Devin Outperformed</h3>
+                <p>We outperform Devin on standard software engineering benchmarks.</p>
+                <span class="arrow">→</span>
+            </a>
+            <div class="card">
+                <span class="card-tag">Robotics</span>
+                <h3>Bespoke AI Solutions</h3>
+                <p>Bespoke AI solutions in Robotics Sensing space.</p>
+            </div>
+            <a href="http://chbird.ai/blog" class="card card-highlight">
+                <span class="card-tag">Archive</span>
+                <h3>Read the Blog</h3>
+                <p>Explore our full collection of thoughts on the future of software evolution.</p>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="collaborate-section">
+    <div class="container">
+        <h2>Collaborate</h2>
+        <p style="max-width: 800px; margin: 0 auto 3rem;">
+            <a href="team.html" style="color: var(--accent-yellow); text-decoration: underline;">Our team</a> specializes in 0-1 challenging AI and ML projects across software and robotics industries.
+        </p>
+
+        <!-- Dignified Logo Carousel -->
+        <div class="logo-carousel">
+            <!-- Using available assets as placeholders for partners -->
+            <img src="walmart.png" alt="Walmart" class="partner-logo">
+            <img src="irobot.png" alt="iRobot" class="partner-logo">
+            <img src="mit.png" alt="MIT" class="partner-logo">
+            <img src="darpa.png" alt="DARPA" class="partner-logo">
+            <!-- Add Line Vision / Vital Spark here when assets available -->
+        </div>
+
+        <div class="research-cta">
+            <a href="#" class="btn-text">Follow our Research →</a>
+        </div>
+    </div>
+</section>
