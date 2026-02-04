@@ -1,0 +1,151 @@
+Device,Engine,Model Name,Model Size,Quantization,Batch Size,Prefill (tps),Decode (tps),Input Seq Length,Output Seq Len,time to process 100k and generate 2k
+NVIDIA DGX Spark,ollama,gpt-oss,20b,mxfp4,1,"2,053.98",60.91,,,81.5
+NVIDIA DGX Spark,ollama,gpt-oss,120b,mxfp4,1,94.67,41.88,,,1104.0
+NVIDIA DGX Spark,ollama,llama-3.1,8b,q4_K_M,1,"23,169.59",43.18,,,50.6
+NVIDIA DGX Spark,ollama,llama-3.1,8b,q8_0,1,"19,826.27",28.54,,,75.1
+NVIDIA DGX Spark,ollama,llama-3.1,70b,q4_K_M,1,411.41,4.58,,,679.7
+NVIDIA DGX Spark,ollama,gemma-3,12b,q4_K_M,1,"1,513.60",26.51,,,141.5
+NVIDIA DGX Spark,ollama,gemma-3,12b,q8_0,1,"1,131.42",16.09,,,212.7
+NVIDIA DGX Spark,ollama,gemma-3,27b,q4_K_M,1,680.68,11.51,,,320.7
+NVIDIA DGX Spark,ollama,gemma-3,27b,q8_0,1,65.37,7.35,,,1801.8
+NVIDIA DGX Spark,ollama,deepseek-r1,14b,q4_K_M,1,"2,500.24",21.45,,,133.2
+NVIDIA DGX Spark,ollama,deepseek-r1,14b,q8_0,1,"1,816.97",13.68,,,201.3
+NVIDIA DGX Spark,ollama,qwen-3,32b,q4_K_M,1,100.42,9.53,,,1205.7
+NVIDIA DGX Spark,ollama,qwen-3,32b,q8_0,1,37.85,6.24,,,2962.6
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,1,433.91,69.56,2048,2048,259.2
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,1,676.22,50.54,2048,2048,187.5
+NVIDIA DGX Spark,sglang,llama-3.1,8b,fp8,1,"7,991.11",20.52,2048,2048,110.0
+NVIDIA DGX Spark,sglang,llama-3.1,70b,fp8,1,803.54,2.66,2048,2048,875.8
+NVIDIA DGX Spark,sglang,gemma-3,12b,fp8,1,"1,295.83",6.84,2048,2048,369.5
+NVIDIA DGX Spark,sglang,gemma-3,27b,fp8,1,717.36,3.83,2048,2048,661.9
+NVIDIA DGX Spark,sglang,deepseek-r1,14b,fp8,1,"2,177.04",12.02,2048,2048,212.4
+NVIDIA DGX Spark,sglang,qwen-3,32b,fp8,1,"1,145.66",6.08,2048,2048,416.0
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,2,427.26,97.66,2048,2048,254.5
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,2,242.66,68.15,2048,2048,441.4
+NVIDIA DGX Spark,sglang,llama-3.1,8b,fp8,2,"7,377.34",42.30,2048,2048,60.8
+NVIDIA DGX Spark,sglang,llama-3.1,70b,fp8,2,876.90,5.31,2048,2048,490.4
+NVIDIA DGX Spark,sglang,gemma-3,12b,fp8,2,"1,541.21",16.13,2048,2048,188.9
+NVIDIA DGX Spark,sglang,gemma-3,27b,fp8,2,723.61,7.76,2048,2048,395.9
+NVIDIA DGX Spark,sglang,deepseek-r1,14b,fp8,2,"2,027.24",24.00,2048,2048,132.7
+NVIDIA DGX Spark,sglang,qwen-3,32b,fp8,2,"1,150.12",12.17,2048,2048,251.3
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,4,469.98,158.64,2048,2048,225.4
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,4,293.93,91.95,2048,2048,362.0
+NVIDIA DGX Spark,sglang,llama-3.1,8b,fp8,4,"7,902.03",77.31,2048,2048,38.5
+NVIDIA DGX Spark,sglang,llama-3.1,70b,fp8,4,948.18,10.40,2048,2048,297.8
+NVIDIA DGX Spark,sglang,gemma-3,12b,fp8,4,"1,351.51",30.92,2048,2048,138.7
+NVIDIA DGX Spark,sglang,gemma-3,27b,fp8,4,801.56,14.95,2048,2048,258.5
+NVIDIA DGX Spark,sglang,deepseek-r1,14b,fp8,4,"2,106.97",45.28,2048,2048,91.6
+NVIDIA DGX Spark,sglang,qwen-3,32b,fp8,4,"1,148.81",23.72,2048,2048,171.4
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,8,552.53,219.25,2048,2048,190.1
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,8,302.10,117.06,2048,2048,348.1
+NVIDIA DGX Spark,sglang,llama-3.1,8b,fp8,8,"7,744.30",143.92,2048,2048,26.8
+NVIDIA DGX Spark,sglang,llama-3.1,70b,fp8,8,948.52,20.20,2048,2048,204.5
+NVIDIA DGX Spark,sglang,gemma-3,12b,fp8,8,"1,302.91",55.79,2048,2048,112.6
+NVIDIA DGX Spark,sglang,gemma-3,27b,fp8,8,807.33,27.77,2048,2048,195.9
+NVIDIA DGX Spark,sglang,deepseek-r1,14b,fp8,8,"2,073.64",83.51,2048,2048,72.2
+NVIDIA DGX Spark,sglang,qwen-3,32b,fp8,8,"1,149.34",44.55,2048,2048,131.9
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,16,553.80,343.25,2048,2048,186.4
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,16,316.81,147.90,2048,2048,329.2
+NVIDIA DGX Spark,sglang,llama-3.1,8b,fp8,16,"7,486.30",244.74,2048,2048,21.5
+NVIDIA DGX Spark,sglang,gemma-3,12b,fp8,16,"1,556.14",93.83,2048,2048,85.6
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,32,545.86,521.87,2048,2048,187.0
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,32,307.22,203.11,2048,2048,335.3
+NVIDIA DGX Spark,sglang,llama-3.1,8b,fp8,32,"7,949.83",368.09,2048,2048,18.0
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,64,551.13,781.91,2048,2048,184.0
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,64,308.53,291.65,2048,2048,331.0
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,128,554.15,"1,103.12",2048,2048,182.3
+NVIDIA DGX Spark,sglang,gpt-oss,120b,mxfp4,128,310.65,324.62,2048,2048,328.1
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,256,555.13,"1,345.93",2048,2048,181.6
+NVIDIA DGX Spark,sglang,gpt-oss,20b,mxfp4,256,548.70,"2,577.98",512,128,183.0
+RTX Pro 6000 Blackwell Edition,ollama,gpt-oss,20b,mxfp4,1,"10,108.05",215.19,,,19.2
+RTX Pro 6000 Blackwell Edition,ollama,gpt-oss,120b,mxfp4,1,"3,409.30",153.32,,,42.4
+RTX Pro 6000 Blackwell Edition,ollama,llama-3.1,8b,q4_K_M,1,"38,863.83",201.62,,,12.5
+RTX Pro 6000 Blackwell Edition,ollama,llama-3.1,8b,q8_0,1,"40,037.01",143.54,,,16.4
+RTX Pro 6000 Blackwell Edition,ollama,llama-3.1,70b,q4_K_M,1,"2,298.58",32.12,,,105.8
+RTX Pro 6000 Blackwell Edition,ollama,gemma-3,12b,q4_K_M,1,"6,376.34",111.99,,,33.5
+RTX Pro 6000 Blackwell Edition,ollama,gemma-3,12b,q8_0,1,"6,602.39",82.83,,,39.3
+RTX Pro 6000 Blackwell Edition,ollama,gemma-3,27b,q4_K_M,1,"3,424.27",63.29,,,60.8
+RTX Pro 6000 Blackwell Edition,ollama,gemma-3,27b,q8_0,1,"3,388.73",43.37,,,75.6
+RTX Pro 6000 Blackwell Edition,ollama,deepseek-r1,14b,q4_K_M,1,"10,274.55",114.37,,,27.2
+RTX Pro 6000 Blackwell Edition,ollama,deepseek-r1,14b,q8_0,1,"10,825.80",80.17,,,34.2
+RTX Pro 6000 Blackwell Edition,ollama,qwen-3,32b,q4_K_M,1,"2,914.14",57.15,,,69.3
+RTX Pro 6000 Blackwell Edition,ollama,qwen-3,32b,q8_0,1,"2,841.80",38.35,,,87.3
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,1,"2,480.66",300.14,2048,2048,47.0
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,1,948.66,207.96,2048,2048,115.0
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,8b,fp8,1,"38,744.08",143.90,2048,2048,16.5
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,70b,fp8,1,"4,695.87",20.57,2048,2048,118.5
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,12b,fp8,1,"13,371.54",44.15,2048,2048,52.8
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,27b,fp8,1,"6,416.01",22.62,2048,2048,104.0
+RTX Pro 6000 Blackwell Edition,sglang,deepseek-r1,14b,fp8,1,"14,227.95",73.47,2048,2048,34.2
+RTX Pro 6000 Blackwell Edition,sglang,qwen-3,32b,fp8,1,"6,807.03",23.40,2048,2048,100.1
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,2,"3,461.70",448.62,2048,2048,33.3
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,2,"1,734.89",302.79,2048,2048,64.2
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,8b,fp8,2,"41,981.46",278.52,2048,2048,9.6
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,70b,fp8,2,"4,597.18",40.47,2048,2048,71.2
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,12b,fp8,2,"13,761.76",79.95,2048,2048,32.3
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,27b,fp8,2,"6,284.59",43.90,2048,2048,61.5
+RTX Pro 6000 Blackwell Edition,sglang,deepseek-r1,14b,fp8,2,"13,160.30",143.12,2048,2048,21.6
+RTX Pro 6000 Blackwell Edition,sglang,qwen-3,32b,fp8,2,"6,611.57",57.83,2048,2048,49.7
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,4,"5,061.47",754.47,2048,2048,22.4
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,4,"2,842.56",457.36,2048,2048,39.6
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,8b,fp8,4,"39,670.10",529.15,2048,2048,6.3
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,70b,fp8,4,"4,476.15",79.22,2048,2048,47.6
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,12b,fp8,4,"11,786.13",154.23,2048,2048,21.5
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,27b,fp8,4,"5,745.16",84.73,2048,2048,41.0
+RTX Pro 6000 Blackwell Edition,sglang,deepseek-r1,14b,fp8,4,"12,526.14",275.83,2048,2048,15.2
+RTX Pro 6000 Blackwell Edition,sglang,qwen-3,32b,fp8,4,"6,429.48",121.94,2048,2048,32.0
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,8,"5,042.54","1,190.91",2048,2048,21.5
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,8,"2,816.67",640.14,2048,2048,38.6
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,8b,fp8,8,"37,529.57",969.17,2048,2048,4.7
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,70b,fp8,8,"4,198.60",153.20,2048,2048,36.9
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,12b,fp8,8,"11,300.92",282.15,2048,2048,15.9
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,27b,fp8,8,"5,609.96",158.61,2048,2048,30.4
+RTX Pro 6000 Blackwell Edition,sglang,deepseek-r1,14b,fp8,8,"11,959.12",512.86,2048,2048,12.3
+RTX Pro 6000 Blackwell Edition,sglang,qwen-3,32b,fp8,8,"6,356.54",232.47,2048,2048,24.3
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,16,"5,024.24","1,941.24",2048,2048,20.9
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,16,"2,800.50",869.67,2048,2048,38.0
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,8b,fp8,16,"37,155.41","1,652.02",2048,2048,3.9
+RTX Pro 6000 Blackwell Edition,sglang,gemma-3,12b,fp8,16,"11,444.64",507.78,2048,2048,12.7
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,32,"5,138.05","3,274.49",2048,2048,20.1
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,32,"2,710.10","1,322.73",2048,2048,38.4
+RTX Pro 6000 Blackwell Edition,sglang,llama-3.1,8b,fp8,32,"38,079.92","2,579.32",2048,2048,3.4
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,64,"5,019.36","4,917.68",2048,2048,20.3
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,120b,mxfp4,64,"1,313.88","2,446.29",2048,2048,76.9
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,128,"4,911.25","7,556.89",2048,2048,20.6
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,256,"5,139.34","9,360.73",2048,2048,19.7
+RTX Pro 6000 Blackwell Edition,sglang,gpt-oss,20b,mxfp4,256,"4,982.60","14,943.77",512,128,20.2
+GeForce RTX 5090,ollama,gpt-oss,20b,mxfp4,1,"8,518.57",205.48,,,21.5
+GeForce RTX 5090,ollama,llama-3.1,8b,q4_K_M,1,"30,982.01",200.00,,,13.2
+GeForce RTX 5090,ollama,llama-3.1,8b,q8_0,1,"31,441.77",144.97,,,17.0
+GeForce RTX 5090,ollama,gemma-3,12b,q4_K_M,1,"5,180.34",111.71,,,37.2
+GeForce RTX 5090,ollama,gemma-3,12b,q8_0,1,"5,393.69",84.42,,,42.2
+GeForce RTX 5090,ollama,gemma-3,27b,q4_K_M,1,"2,787.29",65.02,,,66.6
+GeForce RTX 5090,ollama,deepseek-r1,14b,q4_K_M,1,"8,714.30",113.86,,,29.0
+GeForce RTX 5090,ollama,deepseek-r1,14b,q8_0,1,"9,211.80",81.86,,,35.3
+GeForce RTX 5090,ollama,qwen-3,32b,q4_K_M,1,"2,420.22",58.90,,,75.3
+GeForce RTX 5090,sglang,llama-3.1,8b,fp8,1,"21,956.40",137.98,2048,2048,19.0
+GeForce RTX 5090,sglang,llama-3.1,8b,fp8,2,"22,716.83",278.65,2048,2048,11.6
+GeForce RTX 5080,ollama,gpt-oss,20b,mxfp4,1,"5,603.83",140.92,,,32.0
+GeForce RTX 5080,ollama,llama-3.1,8b,q4_K_M,1,"28,927.95",134.69,,,18.3
+GeForce RTX 5080,ollama,llama-3.1,8b,q8_0,1,"30,170.02",90.66,,,25.4
+GeForce RTX 5080,ollama,gemma-3,12b,q4_K_M,1,"3,638.75",76.07,,,53.8
+GeForce RTX 5080,ollama,gemma-3,12b,q8_0,1,"3,757.58",52.95,,,64.4
+GeForce RTX 5080,ollama,deepseek-r1,14b,q4_K_M,1,"6,012.82",75.54,,,43.1
+Mac Studio M1 Max,ollama,gpt-oss,20b,mxfp4,1,869.18,52.74,,,153.0
+Mac Studio M1 Max,ollama,llama-3.1,8b,q4_K_M,1,457.67,42.31,,,265.8
+Mac Studio M1 Max,ollama,llama-3.1,8b,q8_0,1,523.77,33.17,,,251.2
+Mac Studio M1 Max,ollama,gemma-3,12b,q4_K_M,1,283.26,26.49,,,428.5
+Mac Studio M1 Max,ollama,gemma-3,12b,q8_0,1,326.33,21.24,,,400.6
+Mac Studio M1 Max,ollama,gemma-3,27b,q4_K_M,1,119.53,12.98,,,990.7
+Mac Studio M1 Max,ollama,gemma-3,27b,q8_0,1,132.02,10.10,,,955.5
+Mac Studio M1 Max,ollama,deepseek-r1,14b,q4_K_M,1,240.49,23.22,,,501.9
+Mac Studio M1 Max,ollama,deepseek-r1,14b,q8_0,1,274.87,18.06,,,474.6
+Mac Studio M1 Max,ollama,qwen-3,32b,q4_K_M,1,84.78,10.43,,,1371.2
+Mac Studio M1 Max,ollama,qwen-3,32b,q8_0,1,89.74,8.09,,,1361.6
+Mac Mini M4 Pro,ollama,gpt-oss,20b,mxfp4,1,640.58,46.92,,,198.7
+Mac Mini M4 Pro,ollama,llama-3.1,8b,q4_K_M,1,327.32,34.00,,,364.3
+Mac Mini M4 Pro,ollama,llama-3.1,8b,q8_0,1,327.52,26.13,,,381.9
+Mac Mini M4 Pro,ollama,gemma-3,12b,q4_K_M,1,206.34,22.48,,,573.6
+Mac Mini M4 Pro,ollama,gemma-3,12b,q8_0,1,210.41,17.04,,,592.6
+Mac Mini M4 Pro,ollama,gemma-3,27b,q4_K_M,1,81.15,10.62,,,1420.6
+Mac Mini M4 Pro,ollama,deepseek-r1,14b,q4_K_M,1,170.62,17.82,,,698.3
