@@ -54,6 +54,12 @@ def generate_visualization():
             visible = (model == first_model)
             color = device_colors[device]
             
+            # Determine marker symbol based on device type (Apple vs Nvidia/Other)
+            if "Mac" in device:
+                marker_symbol = "diamond"
+            else:
+                marker_symbol = "circle"
+
             # 1. Main Data Trace (Lines + Markers)
             trace_data = go.Scatter(
                 x=device_data['Batch Size'],
@@ -63,6 +69,7 @@ def generate_visualization():
                 legendgroup=device,
                 visible=visible,
                 line=dict(color=color),
+                marker=dict(symbol=marker_symbol, size=8),
                 customdata=device_data[['Prefill (tps)', 'Decode (tps)', 'Quantization', 'Engine']],
                 hovertemplate="<br>".join([
                     "Device: %{x}",
