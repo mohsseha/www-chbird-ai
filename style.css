@@ -544,12 +544,14 @@ footer {
 
 /* Specific fix for dark background sections */
 .collaborate-section .partner-logo {
-    filter: brightness(0) invert(1) opacity(0.8);
-    mix-blend-mode: normal;
+    filter: grayscale(100%) invert(1);
+    mix-blend-mode: screen;
+    opacity: 0.9;
 }
 
 .collaborate-section .partner-logo:hover {
-    filter: brightness(0) invert(1) opacity(1);
+    filter: grayscale(100%) invert(1);
+    opacity: 1;
     transform: scale(1.05);
 }
 
